@@ -1,0 +1,98 @@
+﻿@import "../import/variables";
+@import "../import/mixins";
+
+$skin-primary:#fe9e00;
+$skin-secondary:#ff6400;
+
+$brand-primary: $skin-primary;
+$btn-primary-bg: $skin-primary;
+$btn-primary-border: $skin-primary;
+
+$border-radius:0;
+$border-radius-lg:0;
+$border-radius-sm:0;
+
+// override bootstrap default styles
+$font-family-base:$skin-font-primary;
+
+$enable-transitions: true;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  ws: 1440px    
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  xl: 1140px,
+  ws: 1280px
+);
+
+$grid-gutter-width: 32px;
+
+//$pagination-active-bg: $skin-primary;
+//$pagination-active-border: $skin-primary;
+//$tag-primary-bg: $skin-primary;
+//$progress-bar-bg: $skin-primary;
+
+// font
+$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.6.3/fonts"; // for referencing Bootstrap CDN font files directly
+
+// mmenu
+$mm_backgroundColor				: #000;
+$mm_borderColor					: transparent;
+$mm_dimmedTextColor				: #fff;
+
+$mm_highlightedBackgroundColor	: #2a2a2a;
+$mm_emphasizedBackgroundColor	: #2a2a2a;
+
+$mm_textColor					: rgba( #fff, 0.825 );
+
+$mm_padding			: 15px;
+$mm_btnSize			: 60px;
+$mm_fontSize		: 20px;
+
+// zetta
+
+$zm-heading: #1a1a1a;
+$zm-color: #1a1a1a;
+$zm-height:auto;
+
+$zm-tab-color: #1a1a1a;
+$zm-tab-bg: transparent;
+$zm-tab-hover-color: $brand-primary;
+$zm-tab-hover-bg: transparent;
+
+$zm-sub-color: $zm-color;
+$zm-sub-bg: #fff;
+$zm-sub-hover-color:$brand-primary;
+$zm-sub-hover-bg: #fff;
+
+$zm-content-hover-color: $brand-primary;
+
+$white:#fff;
+$black:#000;
+
+// core
+@import "../import/bootstrap";
+@import "../import/utilities";
+
+// plugins
+@import "../import/fontawesome";
+@import "../import/owlcarousel";
+@import "../import/glasscase";
+@import "../import/zetta";
+@import "../import/mmenu";
+@import "../import/box3d";
+@import "../import/revolution";
+
+// cms
+@import "../import/form";
+@import "../import/ecommerce";
+@import "../import/animate";

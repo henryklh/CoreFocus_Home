@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://vswebessentials.com/schemas/v1/bundle.xsd">
+  <settings>
+    <!--Determines if the bundle file should be automatically optimized after creation/update.-->
+    <minify>true</minify>
+    <!--Determine whether to generate/re-generate this bundle on building the solution.-->
+    <runOnBuild>false</runOnBuild>
+    <!--Specifies a custom subfolder to save files to. By default, compiled output will be placed in the same folder and nested under the original file.-->
+    <outputDirectory />
+  </settings>
+  <!--The order of the <file> elements determines the order of the files in the bundle.-->
+  <files>
+    <file>/app_themes/basic/js/smoothscroll.js</file>
+    <file>/app_themes/basic/js/bootstrap.js</file>
+    <file>/app_themes/basic/js/jquery.hoverIntent.min.js</file>
+    <file>/app_themes/basic/js/jquery.nicescroll.js</file>
+    <file>/app_themes/basic/js/waypoints.js</file>
+    <file>/app_themes/basic/js/waypoints-sticky.js</file>
+    <file>/app_themes/basic/js/jquery.debouncedresize.js</file>
+    <file>/app_themes/basic/js/retina.min.js</file>
+    <file>/app_themes/basic/js/owl.carousel.js</file>
+    <file>/app_themes/basic/js/skrollr.js</file>
+    <file>/app_themes/basic/js/jquery.countTo.js</file>
+    <file>/app_themes/basic/js/isotope.pkgd.min.js</file>
+    <file>/app_themes/basic/js/wow.js</file>
+    <file>/app_themes/basic/plugins/mmenu/js/jquery.mmenu.min.all.js</file>
+  
+  </files>
+</bundle>

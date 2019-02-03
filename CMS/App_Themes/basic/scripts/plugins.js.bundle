@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://vswebessentials.com/schemas/v1/bundle.xsd">
+  <settings>
+    <!--Determines if the bundle file should be automatically optimized after creation/update.-->
+    <minify>true</minify>
+    <!--Determine whether to generate/re-generate this bundle on building the solution.-->
+    <runOnBuild>false</runOnBuild>
+    <!--Specifies a custom subfolder to save files to. By default, compiled output will be placed in the same folder and nested under the original file.-->
+    <outputDirectory />
+  </settings>
+  <!--The order of the <file> elements determines the order of the files in the bundle.-->
+  <files>
+		
+	<file>/app_themes/basic/plugins/owlcarousel2/owl.carousel.js</file>
+	<file>/app_themes/basic/plugins/isotope/imagesloaded.pkgd.min.js</file>
+	<file>/app_themes/basic/plugins/isotope/isotope.pkgd.js</file>
+	<file>/app_themes/basic/plugins/lightslider-master/dist/js/lightslider.js</file>
+	<file>/app_themes/basic/plugins/menuzord/js/menuzord.js</file>
+	<file>/app_themes/basic/plugins/revolution/js/revolution.js</file>
+
+	<file>/app_themes/basic/plugins/zetta/js/zm.jquery.js</file>
+	<!--<file>/app_themes/basic/plugins/mmenu/dist/js/jquery.mmenu.all.min.js</file>-->
+	<file>/app_themes/basic/plugins/mmenu_old/dist/core/js/jquery.mmenu.min.all.js</file>
+	<file>/app_themes/basic/plugins/wow/wow.min.js</file>
+	<file>/app_themes/basic/plugins/lazyload/jquery.lazyload.js</file>
+	  
+	<file>/app_themes/basic/plugins/glasscase/js/modernizr.custom.js</file>
+	<file>/app_themes/basic/plugins/glasscase/js/jquery.glasscase.min.js</file>
+  </files>
+</bundle>

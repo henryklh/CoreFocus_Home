@@ -1,0 +1,320 @@
+﻿@import "combine1";
+@import "scss/variable";
+@import "color/orange";
+
+body {
+    font-family: "proxima-nova",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+.Banner {
+    margin-bottom: 68px;
+
+    .btn-Banner-std {
+        display: inline-block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        padding: 18px;
+        font-weight: normal;
+        color: $white;
+        background-color: $brand-primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 18px;
+        letter-spacing: 6px;
+        line-height: 1;
+    }
+}
+
+section.Content {
+    .pageHeading {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: $gray-light;
+        margin-bottom: 35px;
+
+        .divider {
+            width: 99px;
+            height: 3px;
+            background-color: $brand-primary;
+            margin: 15px auto;
+        }
+    }
+}
+
+.topblank {
+    height: 120px;
+    background-color: $brand-primary;
+}
+
+nav.breadcrumb {
+    border-radius: 0;
+    margin-bottom: 0;
+    background-color: $brand-primary;
+    padding: 10px 0;
+    text-align:right;
+    color:$white;
+    font-size:15px;
+    letter-spacing:3px;
+    padding-right:55px;
+
+    a { color:$white; }
+}
+
+.bg-light-primary-1 {
+    background-color: $gray;
+    padding: 30px 0;
+}
+
+.FeatureZone {
+    margin-bottom: 55px;
+    font-size: 16px;
+    color: #808285;
+
+    h5, p {
+        padding-left: 5px;
+    }
+
+    .itempaddingfix {
+        @media (max-width:480px) {
+            padding-top: 30px;
+        }
+    }
+}
+
+.ContentPage {
+    .column01 {
+        padding-left: 55px;
+    }
+
+    .FeatureZone {
+        margin: 0;
+        font-size: 16px;
+        color: #808285;
+        padding: 0 55px 30px 55px;
+
+        h5, p {
+            padding-left: 0;
+        }
+
+        .itempaddingfix {
+            @media (max-width:480px) {
+                padding-top: 30px;
+            }
+        }
+    }
+
+    .PageHeadingWrapper {
+        padding: 3% 70px;
+        color:#808285;
+        font-size:24px;
+        font-weight:300;
+        .PageHeading {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: $gray-light;
+            margin-bottom: 35px;
+
+            .divider {
+                width: 99px;
+                height: 3px;
+                background-color: $brand-primary;
+                margin: 15px 0;
+            }
+        }
+    }
+}
+
+.Footer {
+    .FootPanel {
+        padding: 20px 48px;
+
+        @media (max-width: 481px) {
+            padding: 20px 0px;
+        }
+    }
+
+    .dark-primary-1 {
+        background-color: $gray-light;
+        font-size: 17px;
+        color: #808285;
+
+        h6 {
+            color: $white;
+            padding-top: 18px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid $white;
+            font-weight: 500;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .address {
+            color: $white;
+            font-weight: 400;
+            line-height: 20px;
+            min-width: 320px;
+
+            @media (max-width: 480px) {
+                max-width: 280px;
+                min-width: 280px;
+                font-size: 15px;
+            }
+
+            img {
+                margin-right: 25px;
+            }
+        }
+
+        .socialicon {
+            margin: 20px 0 0 12px;
+
+            &.first {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .Copyright {
+        background-color: $brand-primary;
+        text-align: center;
+        color: $white;
+        padding: 22px;
+        font-size: 15px;
+
+        a {
+            color: $white;
+        }
+    }
+}
+
+//Text
+h3 {
+    color: $gray-light;
+    font-weight: 700;
+    font-size: 18px;
+    //padding-top: 15px;
+    margin:0;
+    padding-bottom: 5px;
+}
+
+h4 {
+    color: $gray-light;
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+h5 {
+    color: $gray-light;
+    font-weight: 700;
+    font-size: 17px;
+    padding-bottom: 5px;
+    padding-top: 18px;
+    letter-spacing: 3px;
+}
+
+p {
+}
+
+.text-center {
+    text-align: center;
+}
+//Listing ul li
+.ticklist {
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding-left: 15px;
+
+            &:before {
+                content: "\f00c"; /* FontAwesome Unicode */
+                font-family: FontAwesome;
+                display: inline-block;
+                margin-left: -15px; /* same as padding-left set on li */
+                width: 1.3em; /* same as padding-left set on li */
+                color: $brand-primary;
+            }
+        }
+    }
+}
+//Button
+.btn {
+    &.btn-default {
+        display: inline-block;
+        text-align: center;
+        margin-right: 3%;
+        margin-top: 5%;
+        padding: 18px 28px;
+        font-weight: normal;
+        color: $gray-light;
+        background-color: $white;
+        border: 1px solid $brand-primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 18px;
+        letter-spacing: 6px;
+        line-height: 1;
+        border-radius: 0;
+    }
+     &.btn-default-rev {
+        display: inline-block;
+        text-align: center;
+        margin-right: 3%;
+        margin-top: 5%;
+        padding: 18px 28px;
+        font-weight: normal;
+        color: $gray-light;
+        background-color: $white;
+        border: 1px solid $brand-primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 18px;
+        letter-spacing: 6px;
+        line-height: 1;
+        border-radius: 0;
+    }
+    &.btn-primary {
+        display: inline-block;
+        text-align: center;
+        margin-right: 3%;
+        margin-top: 5%;
+        padding: 18px 28px;
+        font-weight: normal;
+        color: $white;
+        background-color: $brand-primary;
+        border: 1px solid $brand-primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 18px;
+        letter-spacing: 6px;
+        line-height: 1;
+        border-radius: 0;
+    }
+   
+}
+//Gallery
+.image-gallery-carousel {
+    margin-right: -15px;
+}
+
+ul.contact-info-list{
+    list-style:none;
+    margin:0;
+    padding: 0;
+}

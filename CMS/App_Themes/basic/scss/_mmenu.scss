@@ -1,0 +1,39 @@
+﻿@import "../plugins/mmenu_old/src/core/css/jquery.mmenu.all";
+//@import "../plugins/mmenu/dist/scss/jquery.mmenu.all";
+
+.mmenu-caller {
+    display:block;
+    width: 60px;
+    height: 46px;
+    padding: 13px 0 0;
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+
+    em {
+        width: 20px;
+        height: 3px;
+        margin: 3.5px 20px 0;
+        float: right;
+        background: #777;
+    }
+
+}
+
+.menuzord {
+    .showhide {
+        display:none !important;
+    }
+}
+
+.mm-navbar-size-1 {
+
+    .mm-title {
+        font-weight:700;
+    }
+
+    .btn-icon-circle {
+        margin:5px;
+    }
+}

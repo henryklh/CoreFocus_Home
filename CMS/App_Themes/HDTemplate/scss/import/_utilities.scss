@@ -1,0 +1,206 @@
+﻿@include media-breakpoint-up(lg) {
+    .grid-table-lg {
+        display:table;
+
+        > .row {
+            display:table-row;
+
+            > div[class*="col-"] {
+                display:table-cell;
+                float:none;
+            }
+        }
+    }
+}
+
+.link-icon {
+    @include icon-link();
+}
+
+.btn-icon {
+    @include icon-button();
+}
+
+.btn-icon-circle {
+    @include icon-button($icon-border-radius:($btn-icon-border-radius*4));
+
+    &.btn-lg {
+        @include icon-button($icon-padding:$btn-padding-y, $icon-size:($font-size-base * 1.5), $icon-border-radius:($btn-padding-y-lg*4));
+    }
+}
+
+.btn-icon-square {
+    @include icon-button($icon-border-radius:0);
+    @include border-left-radius(0);
+    @include border-right-radius(0);
+
+    &.btn-lg {
+        padding:6px;
+        font-size:1.5rem;
+    }
+}
+
+.btn-facebook {
+    @include icon-button-variant(#fff,$facebook, $facebook);
+}
+.btn-twitter {
+    @include icon-button-variant(#fff,$twitter, $twitter);
+}
+.btn-skype {
+    @include icon-button-variant(#fff,$skype, $skype);
+}
+.btn-linkedin {
+    @include icon-button-variant(#fff,$linkedin, $linkedin);
+}
+.btn-googleplus {
+    @include icon-button-variant(#fff,$googleplus, $googleplus);
+}
+.btn-youtube {
+    @include icon-button-variant(#fff,$youtube, $youtube);
+}
+.btn-flickr {
+    @include icon-button-variant(#fff,$flickr, $flickr);
+}
+.btn-pinterest {
+    @include icon-button-variant(#fff,$pinterest, $pinterest);
+}
+.btn-instagram {
+    @include icon-button-variant(#fff,$instagram, $instagram);
+}
+.btn-tumblr {
+    @include icon-button-variant(#fff,$tumblr, $tumblr);
+}
+.btn-soundcloud {
+    @include icon-button-variant(#fff,$soundcloud, $soundcloud);
+}
+
+
+.btn-facebook-o {
+    @include icon-button-outline-variant($facebook);
+}
+.btn-twitter-o {
+    @include icon-button-outline-variant($twitter);
+}
+.btn-skype-o {
+    @include icon-button-outline-variant($skype);
+}
+.btn-linkedin-o {
+    @include icon-button-outline-variant($linkedin);
+}
+.btn-googleplus-o {
+    @include icon-button-outline-variant($googleplus);
+}
+.btn-youtube-o {
+    @include icon-button-outline-variant($youtube);
+}
+.btn-flickr-o {
+    @include icon-button-outline-variant($flickr);
+}
+.btn-pinterest-o {
+    @include icon-button-outline-variant($pinterest);
+}
+.btn-instagram-o {
+    @include icon-button-outline-variant($instagram);
+}
+.btn-tumblr-o {
+    @include icon-button-outline-variant($tumblr);
+}
+.btn-soundcloud-o {
+    @include icon-button-outline-variant($soundcloud);
+}
+
+.btn-facebook-s {
+    @include icon-button-skin-variant($facebook);
+}
+.btn-twitter-s {
+    @include icon-button-skin-variant($twitter);
+}
+.btn-skype-s {
+    @include icon-button-skin-variant($skype);
+}
+.btn-linkedin-s {
+    @include icon-button-skin-variant($linkedin);
+}
+.btn-googleplus-s {
+    @include icon-button-skin-variant($googleplus);
+}
+.btn-youtube-s {
+    @include icon-button-skin-variant($youtube);
+}
+.btn-flickr-s {
+    @include icon-button-skin-variant($flickr);
+}
+.btn-pinterest-s {
+    @include icon-button-skin-variant($pinterest);
+}
+.btn-instagram-s {
+    @include icon-button-skin-variant($instagram);
+}
+.btn-tumblr-s {
+    @include icon-button-skin-variant($tumblr);
+}
+.btn-soundcloud-s {
+    @include icon-button-skin-variant($soundcloud);
+}
+
+.btn-facebook-so {
+    @include icon-button-skin-outline-variant($facebook);
+}
+.btn-twitter-so {
+    @include icon-button-skin-outline-variant($twitter);
+}
+.btn-skype-so {
+    @include icon-button-skin-outline-variant($skype);
+}
+.btn-linkedin-so {
+    @include icon-button-skin-outline-variant($linkedin);
+}
+.btn-googleplus-so {
+    @include icon-button-skin-outline-variant($googleplus);
+}
+.btn-youtube-so {
+    @include icon-button-skin-outline-variant($youtube);
+}
+.btn-flickr-so {
+    @include icon-button-skin-outline-variant($flickr);
+}
+.btn-pinterest-so {
+    @include icon-button-skin-outline-variant($pinterest);
+}
+.btn-instagram-so {
+    @include icon-button-skin-outline-variant($instagram);
+}
+.btn-tumblr-so {
+    @include icon-button-skin-outline-variant($tumblr);
+}
+.btn-soundcloud-so {
+    @include icon-button-skin-outline-variant($soundcloud);
+}
+
+.btn-transparent {
+    background:none;
+    border:0;
+}
+
+.container.container-table {
+
+    @include media-breakpoint-up(lg) {
+        margin:0 auto;
+        display:table;
+        width:100%;
+        padding-left:0;
+        padding-right:0;
+
+        .row {
+            display:table-row;
+            margin-left:0;
+            margin-right:0;
+
+            [class*="col-"] {
+                display:table-cell;
+                float: none;
+            }
+        }
+    }
+        
+}

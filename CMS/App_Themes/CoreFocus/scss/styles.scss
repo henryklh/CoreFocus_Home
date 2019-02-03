@@ -1,0 +1,19 @@
+﻿// skin layout
+@import "import/skin";
+
+@include media-breakpoint-down(sm) {
+    .btn-lg, .btn-group-lg > .btn {
+        padding: 10px 10px ;
+        font-size: 15px;
+        border-radius: .3rem;
+        white-space: pre-wrap;
+        min-height:60px;
+    }
+}
+.breadcrumb {
+    background-color: #fff;
+
+    a {
+        color: #1be7ee;
+    }
+}

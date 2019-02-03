@@ -1,0 +1,46 @@
+﻿@import "../../plugins/bootstrap-4-dev/scss/variables";
+
+$font-family-fontawesome: FontAwesome !default;
+$font-family-Arial: Arial, sans-serif !default;
+
+$btn-icon-color: #fff !default;
+$btn-icon-bg: $gray-light !default;
+$btn-icon-border-color: $gray-light !default;
+$btn-icon-border-radius:0.25rem !default;
+$btn-icon-border-width: 1px !default;
+$btn-icon-padding-width:0.25rem !default; // for circle or square
+
+//== colors
+$twitter: 				   #55acee !default;
+$skype: 				   #00aff0 !default;
+$facebook:                 #3b5998 !default;
+$linkedin:                 #0976b4 !default;
+$googleplus:               #dd4b39 !default;
+$youtube:                  #b31217 !default;
+$flickr:                   #ff0084 !default;
+$pinterest:                #cb2027 !default;
+$instagram:                #517fa4 !default;
+$vimeo:                    #aad450 !default;
+$tumblr:                   #32506d !default;
+$soundcloud:               #ff3a00 !default;
+$foursquare:               #0072b1 !default;
+$dribbble:                 #ea4c89 !default;
+$behance:                  #053eff !default;
+$vine:                     #00a478 !default;
+$stumbleupon:              #f74425 !default;
+$xing:              	   #126567 !default;
+
+$skin-font-primary: "proxima-nova", sans-serif !default;
+$skin-font-secondary: "nimbus-sans", sans-serif !default;
+
+$skin-primary-bg:$btn-primary-bg !default;
+$skin-primary-color:$btn-primary-color !default;
+$skin-primary-border:$btn-primary-border !default;
+
+$skin-secondary-bg:$btn-primary-bg !default;
+$skin-secondary-color:$btn-primary-color !default;
+$skin-secondary-border:$btn-primary-border !default;
+
+$skin-third-bg:$btn-primary-bg !default;
+$skin-third-color:$btn-primary-color !default;
+$skin-third-border:$btn-primary-border !default;

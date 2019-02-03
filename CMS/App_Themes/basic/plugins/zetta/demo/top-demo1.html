@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+	<!-- meta for mobile devices -->
+	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+
+	<script src="../assets/jquery.min.js" type="text/javascript"></script>
+	<!-- Zetta Menu include -->
+	<link id="themeLink" rel="stylesheet" href="../themes/zetta-menu-default/blue.css">
+	<script src="../js/zm.jQuery.js" type="text/javascript"></script>
+	<script>
+	$(function(){
+	    $('.zetta-menu').zettaMenu({ responsive: 'stack-margin', showOn: "hover", sticky: true });
+	});
+	</script>
+	<!-- /Zetta Menu include -->
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="../assets/font-awesome.min.css">
+
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+<body style="background-color: #EAEAEA;">
+	<br><br>
+
+	<ul>
+		<li>Simple items</li>
+		<li>No icons</li>
+		<li>Dropdown right</li>
+		<li>Dropdown left</li>
+		<li>Multi dropdown</li>
+		<li>Responsive switch</li>
+	</ul>
+	<!-- Zetta Menu 1 -->
+	<ul class="zetta-menu">
+		<!-- Logo -->
+		<li class="zm-logo"><a href="#"><img title="zettaMenu logo image" src="img/logo.png" alt=""></a></li>
+		<!-- /Logo -->
+
+		<!-- Simple Item -->
+		<li><a href="#">Simple</a></li>
+		<!-- /Simple Item -->
+
+		<!-- Multilevel Dropdown Menu -->
+		<li><a>Drop Right<i class="zm-caret fa fa-angle-down"></i></a>
+			<ul zm-size="200">
+				<li><a href="#">Level One</a></li>
+				<li><a href="#">Level One</a></li>
+				<li><a><i class="zm-caret fa fa-angle-right"></i>Level One</a>
+					<ul zm-size="200">
+						<li><a href="#">Level Two</a></li>
+						<li><a href="#">Level Two</a></li>
+						<li><a><i class="zm-caret fa fa-angle-right"></i>Level Two</a>
+							<ul zm-size="200">
+								<li><a href="#">Level Three</a></li>
+								<li><a><i class="zm-caret fa fa-angle-right"></i>Level Three</a>
+									<ul zm-size="200">
+										<li><a href="#">Level Four</a></li>
+										<li><a href="#">Level Four</a></li>
+										<li><a href="#">Level Four</a></li>
+										<li><a href="#">Level Four</a></li>
+										<li><a href="#">Level Four</a></li>
+										<li><a href="#">Level Four</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Level Three</a></li>
+								<li><a href="#">Level Three</a></li>
+								<li><a href="#">Level Three</a></li>
+								<li><a href="#">Level Three</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Level Two</a></li>
+						<li><a href="#">Level Two</a></li>
+						<li><a href="#">Level Two</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Level One</a></li>
+				<li><a href="#">Level One</a></li>
+				<li><a href="#">Level One</a></li>
+			</ul>
+		</li>
+		<!-- /Multilevel Dropdown Menu -->
+
+		<!-- Multilevel Left Dropdown Menu -->
+		<li class="zm-right-align"><a>Drop Left<i class="zm-caret fa fa-angle-down"></i></a>
+			<ul zm-size="200">
+				<li><a href="#">Level One</a></li>
+				<li><a href="#">Level One</a></li>
+				<li><a><i class="zm-caret fa fa-angle-left"></i>Level One</a>
+					<ul class="zm-drop-left" zm-size="200">
+						<li><a href="#">Level Two</a></li>
+						<li><a href="#">Level Two</a></li>
+						<li><a href="#">Level Two</a></li>
+						<li><a href="#">Level Two</a></li>
+						<li><a href="#">Level Two</a></li>
+						<li><a href="#">Level Two</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Level One</a></li>
+				<li><a href="#">Level One</a></li>
+				<li><a href="#">Level One</a></li>
+			</ul>
+		</li>
+		<!-- /Multilevel Dropdown Menu -->
+
+		<!-- Multicolumn Dropdown Menu -->
+		<li class="zm-right-align"><a href="http://www.google.com.au">Multi Drop<i class="zm-caret fa fa-angle-down"></i></a>
+            <div class="zm-multi-column" zm-size="600">
+                <ul zm-size="200">
+                    <li><a href="#">Level One</a></li>
+                    <li><a href="#">Level One</a></li>
+                    <li>
+                        <a><i class="zm-caret fa fa-angle-left"></i>Level One</a>
+                        <ul zm-size="200" class="zm-drop-left">
+                            <li><a href="#">Level Two Left</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Level One</a></li>
+                    <li><a href="#">Level One</a></li>
+                    <li><a href="#">Level One</a></li>
+                </ul>
+                <ul zm-size="200">
+                    <li><a href="#">Level One</a></li>
+                    <li><a href="#">Level One</a></li>
+                    <li>
+                        <a><i class="zm-caret fa fa-angle-right"></i>Level One</a>
+                        <ul zm-size="200">
+                            <li><a href="#">Level Two Right</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Level One</a></li>
+                    <li><a href="#">Level One</a></li>
+                    <li><a href="#">Level One</a></li>
+                </ul>
+                <ul zm-size="200">
+                    <li><a href="#">Level One</a></li>
+                    <li><a href="#">Level One</a></li>
+                    <li>
+                        <a><i class="zm-caret fa fa-angle-right"></i>Level One</a>
+                        <ul zm-size="200">
+                            <li><a href="#">Level Two Right</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                            <li><a href="#">Level Two</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Level One</a></li>
+                    <li><a href="#">Level One</a></li>
+                    <li><a href="#">Level One</a></li>
+                </ul>
+            </div>
+		</li>
+		<!-- /Multicolumn Dropdown Menu -->
+
+		<!-- Search Place -->
+		<li class="zm-search zm-right-item">
+			<form action="">
+				<input id="search-1" name="search" type="search">
+				<label for="search-1" class="fa fa-search"></label>
+			</form>
+		</li>
+		<!-- /Search Place -->
+	</ul>
+	<!-- /Zetta Menu 1 -->
+    <br><br>
+
+    <ul>
+        <li>Simple items</li>
+        <li>No icons</li>
+        <li>Dropdown right</li>
+        <li>Dropdown left</li>
+        <li>Multi dropdown</li>
+        <li>Responsive switch</li>
+    </ul>
+
+    <br><br>
+
+    <ul>
+        <li>Simple items</li>
+        <li>No icons</li>
+        <li>Dropdown right</li>
+        <li>Dropdown left</li>
+        <li>Multi dropdown</li>
+        <li>Responsive switch</li>
+    </ul>
+
+    <br><br>
+
+    <ul>
+        <li>Simple items</li>
+        <li>No icons</li>
+        <li>Dropdown right</li>
+        <li>Dropdown left</li>
+        <li>Multi dropdown</li>
+        <li>Responsive switch</li>
+    </ul>
+
+    <br><br>
+
+    <ul>
+        <li>Simple items</li>
+        <li>No icons</li>
+        <li>Dropdown right</li>
+        <li>Dropdown left</li>
+        <li>Multi dropdown</li>
+        <li>Responsive switch</li>
+    </ul>
+
+    <br><br>
+
+    <ul>
+        <li>Simple items</li>
+        <li>No icons</li>
+        <li>Dropdown right</li>
+        <li>Dropdown left</li>
+        <li>Multi dropdown</li>
+        <li>Responsive switch</li>
+    </ul>
+
+    <br><br>
+
+    <ul>
+        <li>Simple items</li>
+        <li>No icons</li>
+        <li>Dropdown right</li>
+        <li>Dropdown left</li>
+        <li>Multi dropdown</li>
+        <li>Responsive switch</li>
+    </ul>
+
+    <br><br>
+
+    <ul>
+        <li>Simple items</li>
+        <li>No icons</li>
+        <li>Dropdown right</li>
+        <li>Dropdown left</li>
+        <li>Multi dropdown</li>
+        <li>Responsive switch</li>
+    </ul>
+
+    <br><br>
+
+    <ul>
+        <li>Simple items</li>
+        <li>No icons</li>
+        <li>Dropdown right</li>
+        <li>Dropdown left</li>
+        <li>Multi dropdown</li>
+        <li>Responsive switch</li>
+    </ul>
+
+    <br><br>
+
+    <ul>
+        <li>Simple items</li>
+        <li>No icons</li>
+        <li>Dropdown right</li>
+        <li>Dropdown left</li>
+        <li>Multi dropdown</li>
+        <li>Responsive switch</li>
+    </ul>
+
+    <br><br>
+
+    <ul>
+        <li>Simple items</li>
+        <li>No icons</li>
+        <li>Dropdown right</li>
+        <li>Dropdown left</li>
+        <li>Multi dropdown</li>
+        <li>Responsive switch</li>
+    </ul>
+</body>
+<style>
+	html, body, .zetta-menu input, .zetta-menu textarea {
+		font-family: 'Lato', sans-serif;
+	}
+</style>
+</html>

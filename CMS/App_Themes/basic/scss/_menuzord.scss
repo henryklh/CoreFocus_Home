@@ -1,0 +1,48 @@
+﻿@import "../plugins/menuzord/css/menuzord";
+
+//-- custom styles for basic
+
+//TopMenu
+.menuzord {
+    float: right;
+    width: auto;
+    padding-top: 16px;
+    background-color: transparent;
+
+    .indicator {
+        margin-left: 5px;
+    }
+
+    .menuzord-menu {
+        > li {
+            color: $gray-light;
+
+            a {
+                color: $gray-light;
+                text-transform: uppercase;
+                padding: 16px 16px;
+            }
+
+            ul {
+                &.dropdown {
+                    background-color: $skin-secondary;
+                }
+
+                li {
+                    color: $gray-light;
+                    font-size: 16px;
+
+                    a {
+                        color: $white;
+                        text-transform: none;
+
+                        &:hover {
+                            color: $white;
+                            text-transform: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

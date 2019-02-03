@@ -1,0 +1,402 @@
+﻿.ErrorLabel {
+    color:$alert-danger-text;
+    padding:$alert-padding;
+    display:block;
+    background-color:$alert-danger-bg;
+    border:1px solid $alert-danger-border;
+    margin-bottom:1rem;
+}
+
+.WatermarkText {
+    color:$gray-light;
+}
+
+.message-board-form,
+.registration-form,
+.FormPanel {
+    .fa-asterisk {
+        color:$brand-danger;
+        font-size:50%;
+        vertical-align:middle;
+        font-weight:400;
+    }
+
+    .form-group {
+        .fa-asterisk {
+            color:$brand-danger;
+            font-size:50%;
+            vertical-align:top;
+            font-weight:400;
+            padding-left:0.25rem;
+            margin-top:0.25rem;
+        }
+    }
+    
+    .form-control-error,
+    .EditingFormErrorLabel {
+
+        display:inline-block;
+        padding:0.25rem 0.75rem;
+        background-color:$alert-danger-bg;
+        border:1px solid $alert-danger-border;
+        color:$alert-danger-text;
+        position:relative;
+        margin-top:0.5rem;
+        font-size:87.5%;
+
+        &:before {
+            content:'';
+            display:block;
+            width:0.75rem;
+            height:0.75rem;
+            background-color:$alert-danger-bg;
+            border-top:1px solid $alert-danger-border;
+            border-left:1px solid $alert-danger-border;
+            @include rotate(45deg);
+            position:absolute;
+            top:-0.375rem;
+            left:1.5rem;
+        }
+
+    }
+
+    .form-control-error[style="display: inline;"] {
+        display:inline-block !important;
+    }
+
+    .EditingFormLabel {
+        display: inline-block;
+        margin-bottom: .5rem;
+
+        font-weight:700;
+        //font-size:118.75%;
+    }
+
+    .EditingFormControlNestedControl.Error {
+        @include form-control-validation($brand-danger);
+
+        .WatermarkText {
+            color:$alert-danger-text;
+        }
+    }
+
+    .checkbox {
+
+        input[type="checkbox"] {
+            display:none;
+
+            &+label {
+                display:block;
+                margin-bottom:0.25rem;
+                position:relative;
+                padding-left:24px;
+                font-size:93.75%;
+
+                &:before {
+                    content:"\f00c";
+                    font-family:$font-family-fontawesome;
+                    line-height:12px;
+                    font-size:12px;
+                    padding:1px;
+                    width:1rem;
+                    height:1rem;
+                    text-align:center;
+                    margin-top:2px;
+                    display:block;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    background-color:#fff;
+                    color:#fff;
+                    border:1px solid #ccc;
+                    @include border-bottom-radius(0.25rem);
+                    @include border-top-radius(0.25rem);
+                    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+                }
+            }
+
+        }
+        
+        input[type="checkbox"]:checked {
+            &+label:before {
+                color:#000;
+            }
+        }
+
+        &.checkbox-list-vertical {
+            br {
+                display:none;
+            }
+        }
+    }
+
+    .ReCaptcha {
+        display:inline-block;
+        vertical-align:top;
+
+        > div > div {
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        /*Google captcha resize for small screen*/
+        @include media-breakpoint-down(sm) {
+            transform:scale(0.88);
+            -webkit-transform:scale(0.88);
+            transform-origin:0 0;
+            -webkit-transform-origin:0 0;
+        }
+    }
+}
+
+.rating-star {
+    font-family:$font-family-fontawesome;
+    display:inline-block;
+    vertical-align:middle;
+    font-size: inherit;
+    line-height:1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:#ffbb00;
+
+    &.icon-star-full:before {
+        content:"\f005";
+    }
+
+    &.icon-star-empty:before {
+        content:"\f006";
+    }
+}
+
+/*#region Logon Webpart*/
+.logon-panel {
+    
+    .editing-form-label-cell > label {
+        margin-bottom:0;
+    }
+
+    .checkbox,
+    .checkbox-list-horizontal {
+
+        @include clearfix;
+
+        input[type="checkbox"] {
+            display:none;
+
+            &+label {
+                display:block;
+                //width:50%;
+                float:left;
+                margin-bottom:0.25rem;
+                position:relative;
+                padding-left:24px;
+                font-size:93.75%;
+
+                &:before {
+                    content:"\f00c";
+                    font-family:$font-family-fontawesome;
+                    line-height:12px;
+                    font-size:12px;
+                    padding:1px;
+                    width:1rem;
+                    height:1rem;
+                    text-align:center;
+                    margin-top:2px;
+                    display:block;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    background-color:#fff;
+                    color:#fff;
+                    border:1px solid #ccc;
+                    @include border-bottom-radius(0.25rem);
+                    @include border-top-radius(0.25rem);
+                    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+                }
+            }
+
+            @include media-breakpoint-down(xs) {
+                &+label {
+                    width:auto;
+                    float:none;
+                }
+            }
+            
+            /*@media (max-width: breakpoint-max(xs) - 1) {
+                &+label {
+                    width:auto;
+                    float:none;
+                }
+            }*/
+        }
+        
+        input[type="checkbox"]:checked {
+            &+label:before {
+                color:#000;
+            }
+        }
+
+        
+    }
+
+}
+
+.logon-password-retrieval-link {
+
+    display:block;
+    margin-top:1rem;
+
+}
+
+.logon-panel-password-retrieval {
+    border:1px solid $modal-content-border-color;
+    padding:$modal-inner-padding;
+
+    margin-top:1rem;
+}
+
+.RegisterErrorLabel,
+span[id$="RegistrationForm_plcUp_lblError"] {
+    display:block;
+    border:$alert-border-width solid transparent;
+    padding:$alert-padding;
+    
+    @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+
+    color:$alert-danger-text !important;
+    margin-bottom:0.5rem;
+}
+
+.registration-form {
+
+    .editing-form-label-cell > label {
+        margin-bottom:0;
+    }
+    .editing-form-value-cell > br {
+        display:none;
+    }
+
+    .form-control-error[style="display: inline;"] {
+        display:inline-block !important;
+    }
+
+
+}
+
+.password-strength {
+    position:relative;
+    padding-top:12px;
+    .password-strength-text {
+        //line-height: 0.5rem;
+        font-size:0.75rem;
+        position:absolute;
+        top:-20px;
+        right:0;
+    }
+
+    .passw-strength-indicator {
+        //margin-bottom: 0.25rem;
+        max-width: 100%;
+        width: 100%;
+        height: 0.5rem;
+        background-color: $gray;
+
+        position:absolute;
+        top:0;
+        left:0;
+
+        div {
+            height: 100%;
+        }
+    }
+
+    .password-strength-not-acceptable,
+    .password-strength-weak,
+    .password-strength-acceptable,
+    .password-strength-average,
+    .password-strength-strong,
+    .password-strength-excellent {
+        font-weight: bold;
+    }
+
+    .passw-indicator-not-acceptable {
+        background-color: $brand-danger;
+        width: 0;
+    }
+
+    .passw-indicator-weak {
+        background-color: $brand-danger;
+        width: 20%;
+    }
+
+    .passw-indicator-acceptable {
+        background-color: $brand-warning;
+        width: 40%;
+    }
+
+    .passw-indicator-average {
+        background-color: $brand-info;
+        width: 60%;
+    }
+
+    .passw-indicator-strong {
+        background-color: $brand-primary;
+        width: 80%;
+    }
+
+    .passw-indicator-excellent {
+        background-color: $brand-success;
+        width: 100%;
+    }
+}
+
+.SubscriptionsGroup {
+    .InfoLabel {
+        display:block;
+        margin-top:1rem;
+        margin-bottom:1rem;
+
+        padding:$alert-padding;
+        border:1px solid transparent;
+        @include border-radius($alert-border-radius);
+
+        @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
+    }
+
+    .HiddenButton {
+        display:none;
+    }
+}
+
+/*#endregion*/
+
+/*#region Modal Form Settings*/
+.ModalForm {
+
+    .ErrorLabel {
+        margin-bottom:0;
+        margin-top:$modal-inner-padding;
+        margin-left:$modal-inner-padding;
+        margin-right:$modal-inner-padding;
+
+        @include border-radius;
+    }
+
+    .InfoLabel {
+        display:block;
+        padding:$modal-inner-padding;
+    }
+}
+
+.modal-dialog {
+
+    .ErrorLabel {
+        margin-left: ($grid-gutter-width / 2);
+        margin-right: ($grid-gutter-width / 2);
+    }
+
+}
+
+/*#endregion*/
+

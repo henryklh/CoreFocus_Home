@@ -1,0 +1,117 @@
+﻿/* 3d rotate */
+.box3d {
+	position: relative;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-o-perspective: 800px;
+	perspective: 800px;
+}
+
+.box3d-wrapper {
+	-webkit-transition: -webkit-transform 0.75s;
+	-moz-transition: -moz-transform 0.75s;
+	-o-transition: -o-transform 0.75s;
+	transition: transform 0.75s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: right center;
+	-moz-transform-origin: right center;
+	-o-transform-origin: right center;
+	transform-origin: right center;
+}
+
+.box3d:hover .box3d-wrapper {
+	box-shadow:0 3px 12px rgba(0,0,0, 0.18);
+	-webkit-box-shadow:0 3px 12px rgba(0,0,0, 0.18);
+}
+
+.left .box3d-wrapper {
+	-webkit-transform-origin: right center;
+	-moz-transform-origin: right center;
+	-o-transform-origin: right center;
+	transform-origin: right center;
+}
+
+	.right .box3d-wrapper {
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	-o-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.center .box3d-wrapper {
+	-webkit-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+}
+
+.front,
+.back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	width:100%;
+	height:100%;
+}
+
+.back {
+	position: absolute;
+	left:0;
+	top:0;
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+	padding:20px;
+}
+
+.box3d.left:hover .box3d-wrapper {
+	-webkit-transform: translateX( -100% ) rotateY( -180deg );
+	-moz-transform: translateX( -100% ) rotateY( -180deg );
+	-o-transform: translateX( -100% ) rotateY( -180deg );
+	transform: translateX( -100% ) rotateY( -180deg );
+}
+
+.box3d.right:hover .box3d-wrapper {
+	-webkit-transform: translateX( 100% ) rotateY( 180deg );
+	-moz-transform: translateX( 100% ) rotateY( 180deg );
+	-o-transform: translateX( 100% ) rotateY( 180deg );
+	transform: translateX( 100% ) rotateY( 180deg );
+}
+
+.box3d.center:hover .box3d-wrapper {
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+
+
+.box3d.center.reverse:hover .box3d-wrapper {
+	-webkit-transform: rotateY( -180deg );
+	-moz-transform: rotateY( -180deg );
+	-o-transform: rotateY( -180deg );
+	transform: rotateY( -180deg );
+}
+
+/* ie9 fix */
+.ie9 .back {
+	visibility:hidden;
+}
+.ie9 .box3d:hover .back {
+	visibility:visible;
+}
+
+/* fix ie 10+ via media */
+@media screen and (min-width:0\0) {
+	.box3d.left:hover .box3d-wrapper .back,
+	.box3d.right:hover .box3d-wrapper .back,
+	.box3d.center:hover .box3d-wrapper .back {
+		transform: rotateY(-180deg);
+		backface-visibility: visible;
+	}
+}

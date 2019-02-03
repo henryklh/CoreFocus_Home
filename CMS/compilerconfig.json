@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "App_Themes/Unify/assets/vendor/vendor-bundle.es5.js",
+    "inputFile": "App_Themes/Unify/assets/vendor/vendor-bundle.js"
+  },
+  {
+    "outputFile": "App_Themes/Unify/assets/css/custom.css",
+    "inputFile": "App_Themes/Unify/assets/css/custom.scss"
+  }
+]

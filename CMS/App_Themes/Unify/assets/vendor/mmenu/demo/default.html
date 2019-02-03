@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="www.frebsite.nl" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+    <title>jQuery.mmenu demo</title>
+    <link type="text/css" rel="stylesheet" href="css/demo.css" />
+    <link type="text/css" rel="stylesheet" href="../dist/css/jquery.mmenu.all.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../dist/js/jquery.mmenu.all.min.js"></script>
+</head>
+<body>
+    <div id="page">
+        <div class="header">
+            <a href="#menu"></a>
+            Demo
+        </div>
+        <div class="content">
+            <p>
+                <strong>This is a demo.</strong><br />
+                Click the menu icon to open the menu.
+            </p>
+            <p>For more demos, a tutorial, documentation and support, please visit <a href="http://mmenu.frebsite.nl" target="_blank">mmenu.frebsite.nl</a></p>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#about">About us</a>
+                    <ul>
+                        <li><a href="#about/history">History</a></li>
+                        <li>
+                            <a href="#about/team">The team</a>
+                            <ul>
+                                <li><a href="#about/team/management">Management</a></li>
+                                <li><a href="#about/team/sales">Sales</a></li>
+                                <li><a href="#about/team/development">Development</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#about/address">Our address</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            //$("nav#menu").mmenu();
+
+            $('#menu').mmenu({
+                // options go here
+                extensions: ['theme-white', 'border-full'],
+                navbar: {
+                    title: 'Navigation'
+                },
+                navbars: [
+                    {
+                        position: 'top',
+                        height: 2,
+                        content: '<div class="text-xs-center p-y-1 mm-navbar-size-2"><a href="/">logo</a></div>'
+                    },
+                    {
+                        position: 'bottom',
+                        content: '<div class="text-xs-center p-y-0"><a class="btn-icon-circle btn-twitter-outline" href="#"><i class="fa fa-twitter"></i></a><a class="btn-icon-circle btn-pinterest-outline" href="#"><i class="fa fa-pinterest-p"></i></a><a class="btn-icon-circle btn-facebook-outline" href="#"><i class="fa fa-facebook"></i></a></div>'
+                    },
+                    {
+                        position: 'top',
+                        content: ['prev', 'title', 'close']
+                    }
+                ]
+            },
+                {
+                    // Configs go here
+                    classNames: {
+                        selected: 'Highlighted'
+                    },
+                    offCanvas: {
+                        pageNodetype: 'form'
+                    }
+                });
+        });
+    </script>
+</body>
+</html>

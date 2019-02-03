@@ -1,0 +1,657 @@
+﻿/*#region imports*/
+// custom override variables
+@import "custom";
+
+// core
+@import "bootstrap";
+@import "utilities";
+
+// plugins
+@import "fontawesome";
+@import "owlcarousel";
+@import "glasscase";
+@import "revolutionslider";
+@import "zetta";
+@import "mmenu";
+
+// cms
+@import "form";
+@import "ecommerce";
+/*#endregion*/
+
+/*#region reset / preset*/
+//Text
+h3 {
+    color: $gray;
+    font-weight: 700;
+    font-size: 18px;
+    //padding-top: 15px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+h4 {
+    color: $gray;
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+h5 {
+    color: $gray;
+    font-weight: 700;
+    font-size: 17px;
+    padding-bottom: 5px;
+    padding-top: 18px;
+    letter-spacing: 3px;
+}
+/*#endregion*/
+
+/*#region custom webpart styles*/
+.ticklist {
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding-left: 20px;
+
+            &:before {
+                content: "\f00c"; /* FontAwesome Unicode */
+                font-family: FontAwesome;
+                display: inline-block;
+                margin-left: -20px; /* same as padding-left set on li */
+                width: 1.3em; /* same as padding-left set on li */
+                color: $brand-skin;
+            }
+        }
+    }
+}
+
+
+.Banner {
+    background-color: $gray-lighter;
+
+    .btn-Banner-std {
+        display: inline-block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        padding: 18px;
+        font-weight: normal;
+        color: $btn-skin-color;
+        background-color: $brand-skin;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 18px;
+        letter-spacing: 6px;
+        line-height: 1;
+    }
+
+    @include media-breakpoint-up(lg) {
+        min-height:480px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        min-height:600px;
+    }
+}
+
+section.Content {
+
+    .PageHeading,
+    .pageHeading {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: $gray-dark;
+        margin-bottom: 35px;
+
+        .divider {
+            width: 99px;
+            height: 3px;
+            background-color: $brand-skin;
+            margin: 15px auto;
+        }
+
+        &.AlignLeft {
+            text-align: left;
+
+            .divider {
+                margin: 15px 0;
+            }
+        }
+    }
+
+    .FeatureZone {
+        margin-bottom: 55px;
+        font-size: 16px;
+        color: $gray;
+
+        h5, p {
+            padding-left: 5px;
+        }
+    }
+
+    &.bg-light-primary-1 {
+        .FeatureZone {
+            padding: 0 35px;
+        }
+    }
+}
+
+
+nav.breadcrumb {
+    border-radius: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    padding: 10px 0;
+    text-align: right;
+    color: $btn-skin-color;
+    font-size: 15px;
+    letter-spacing: 3px;
+
+    a {
+        color: $btn-skin-color;
+    }
+
+    // fix for menu
+    background-color:$brand-skin;
+    padding-top:120px;
+
+    .CMSBreadCrumbsCurrentItem {
+        display:inline-block;
+        vertical-align:middle;
+        padding-right:16px;
+    }
+}
+
+.bg-light-primary-2 {
+    background-color: $skin-primary-bg;
+    padding: 30px 0;
+    color: $skin-primary-color !important;
+
+    .PageHeading {
+        color:  $skin-primary-color !important;
+
+        .divider {
+            background-color:  $skin-primary-color !important;
+        }
+    }
+}
+
+.bg-light-primary-1 {
+    background-color: $gray-lightest;
+    padding: 30px 0;
+
+    h5 {
+        color: $gray-light;
+    }
+}
+
+/*.bg-dark-grey03 {
+    background-color: $d;
+    color: $white;
+
+    h3 {
+        color: $white;
+        font-size: 125%;
+        font-weight: 700;
+    }
+
+    h4 {
+        font-size: 115%;
+        color: $grey04;
+    }
+
+    .two-columns-fluid {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        color: $grey04;
+
+        .ticklist {
+        }
+
+        .sidecontent {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.bg-dark-primary-2 {
+    background-color: $grey03;
+    padding: 30px 0;
+    color: $white;
+
+    .PageHeading {
+        color: $white;
+        font-size: 28px;
+        font-weight: 700;
+
+        .divider {
+            background-color: $primary01;
+            width: 99px;
+            height: 3px;
+            margin-top: 25px;
+        }
+    }
+
+    .FeatureZone {
+        color: $grey04;
+        padding: 35px 0 70px 0;
+
+        h5 {
+            color: $white;
+        }
+    }
+}
+
+.bg-light-primary-2-light {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.bg-light-primary-1 {
+    background-color: $grey04;
+    padding: 30px 0;
+
+    h5 {
+        color: $grey02;
+    }
+}
+
+.bg-dark-primary-1 {
+    background-color: $primary01;
+    padding: 30px 0;
+    color: $white;
+
+    .PageHeading {
+        color: $white;
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            padding: 20px 0 20px 0;
+        }
+
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: $white;
+            margin: 0;
+            padding: 10px 0 20px 0;
+        }
+
+        .divider {
+            background-color: $primary01;
+        }
+    }
+
+    h5 {
+        color: $white;
+    }
+}*/
+
+.bg-dark-primary-1 {
+    background-color: $skin-primary-bg;
+    color: $skin-primary-color;
+
+    .PageHeading {
+        color: $skin-primary-color;
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            padding: 20px 0 20px 0;
+        }
+
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: $skin-primary-color;
+            margin: 0;
+            padding: 10px 0 20px 0;
+        }
+
+        .divider {
+            background-color: $skin-primary-bg;
+        }
+    }
+
+    h5 {
+        color: $skin-primary-color;
+    }
+}
+
+.ContentPage {
+    @media (min-width: 1200px) {
+        .col-md-9.itempaddingfix {
+            padding-left: 0;
+        }
+    }
+
+    .column01 {
+    }
+
+    .FeatureZone {
+        margin: 0;
+        font-size: 16px;
+        color: #808285;
+        padding: 0 55px 30px 55px;
+
+        h5, p {
+            padding-left: 0;
+        }
+    }
+
+    .PageHeadingWrapper {
+        color: #808285;
+        font-size: 24px;
+        font-weight: 300;
+        
+        padding:1.5rem 15px;
+
+        @include media-breakpoint-down(xs) {
+            padding:1rem 15px;
+        }
+
+
+        .PageHeading {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            //color: $black;
+            margin-bottom: 35px;
+            
+            .divider {
+                width: 99px;
+                height: 3px;
+                background-color: $brand-skin;
+                margin: 15px 0;
+            }
+        }
+    }
+}
+
+.SideNav {
+
+    h3 {
+        //color:$black;
+        margin-bottom:0.5rem;
+        a {
+            //color:$black;
+        }
+    }
+
+    nav {
+        
+        @include clearfix;
+        
+        @include media-breakpoint-down(sm) {
+            
+            &.p-r-1 {
+                padding-right:0 !important;
+            }
+            
+            &.p-l-1 {
+                padding-left:0 !important;
+            }
+
+        }
+
+        ul, li {
+            padding:0;
+            margin:0;
+            list-style:none;
+        }
+
+        a {
+            //color:$black;
+        }
+
+        ul {
+
+            li {
+                display:block;
+                padding:0.5rem 1rem;
+                border-top:1px solid $gray-lighter;
+            }
+        }
+    }
+}
+
+.btn-rounded {
+    padding:0.5rem 1rem;
+    @include border-radius(2rem);
+
+    &.btn-lg {
+        @include border-radius(3rem);
+    }
+}
+
+.btn-skin {
+    @include button-variant($btn-skin-color, $btn-skin-bg, $btn-skin-border);
+}
+
+
+.btn-skin-o {
+    @include button-outline-variant($brand-skin);
+}
+
+.btn-default {
+    @include button-outline-variant($brand-skin);
+    color:$gray-light;
+}
+
+/*#endregion*/
+
+/*#region layout*/
+
+.Section {
+    @include clearfix;
+
+    &.Boxed {
+        max-width:1280px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+.Main {
+    position:relative;
+    z-index:0;
+}
+
+
+.Tools {
+    padding:0 1rem;
+    float:right;
+
+    .MobileNavButton {
+        display:inline-block;
+        padding:10px 0;
+        vertical-align:top;
+
+        .hamburger-sm {
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+    }
+
+    .SmartSearch {
+        display:inline-block;
+        padding:20px 0;
+        vertical-align:top;
+        margin-right:0.5rem;
+
+        > a {
+            display:block;
+            height:40px;
+            width:40px;
+            text-align:center;
+            line-height:40px;
+
+            .fa {
+                font-size:1.25rem;
+            }
+        }
+
+        .dropdown-menu {
+            margin:0;
+            border:0;
+            padding:0.5rem 1rem;
+            width:288px;
+            @include border-radius(0);
+        }
+
+        &.open {
+            > a {
+                background-color:$alert-success-bg;
+                color:$alert-success-text;
+            }
+        }
+    }
+
+    .CartPreview {
+        display:inline-block;
+        padding:20px 0;
+        vertical-align:top;
+        margin-right:0.5rem;
+
+        > a {
+            position:relative;
+            display:block;
+            height:40px;
+            width:40px;
+            text-align:center;
+            line-height:40px;
+
+            .fa {
+                font-size:1.25rem;
+            }
+
+            .Count {
+                display:block;
+                position:absolute;
+                right:0;
+                top:0;
+                font-size:0.75rem;
+                line-height:1;
+                padding:.2rem .25rem .3rem;
+                min-width:1.25rem;
+                height:1.25rem;
+                text-align:center;
+                @include border-radius(1rem);
+                background-color:$brand-danger;
+                color:#fff;
+                margin-right:-0.25rem;
+                margin-top:-0.25rem;
+            }
+        }
+
+        .dropdown-menu {
+            margin:0;
+            border:0;
+            padding:0;
+            width:288px;
+            @include border-radius(0);
+            
+            .CartContent {
+                padding:0 0.5rem;
+            }
+        }
+
+        &.open {
+            > a {
+                background-color:$alert-success-bg;
+                color:$alert-success-text;
+            }
+        }
+    }
+
+    &.mm-slideout {
+        float:none;
+        position:fixed;
+        top:0;
+        right:0;
+    }
+}
+
+.Header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color:rgba(255,255,255,0.75);
+    height:80px;
+    border-bottom:1px solid $card-border-color;
+
+    z-index:1;
+
+    .Logo {
+        float:left;
+        padding-left:1rem;
+        padding-right:1rem;
+        > a {
+            display:block;
+            height:80px;
+            padding-top:10px;
+            padding-bottom:10px;
+            img {
+                max-width:100%;
+                max-height:100%;
+            }
+        }
+    }
+
+    .Tools {
+        &.Fixed {
+            position:relative;
+            right:auto;
+            float:right;
+        }
+    }
+
+    .Navigation {
+        max-width:1280px;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+        height:80px;
+    }
+}
+
+.Footer {
+    position:relative;
+    z-index:0;
+}
+
+/*#endregion*/
+
+/*#region CMS fix*/
+body.DesignMode {
+    .Header {
+        position:absolute !important;
+        top:60px;
+    }
+    .Main {
+        padding-top:80px;
+    }
+}
+
+body.EditMode {
+    .Header {
+        position:absolute !important;
+        top:60px;
+    }
+    .Main {
+        padding-top:80px;
+    }
+}
+/*#endregion*/

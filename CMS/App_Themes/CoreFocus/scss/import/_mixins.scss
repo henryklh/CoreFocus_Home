@@ -1,0 +1,333 @@
+﻿@import "../../plugins/bootstrap-4-dev/scss/mixins";
+
+
+@function parseInt($n) { /* 2 */
+  @return $n / ($n * 0 + 1);
+}
+
+@function convertToPx($v) {
+
+    @if (unit($v) == "rem") {
+        @return (parseInt($v) * 16) * 1px;
+    }
+
+    @if (unit($v) == "%") {
+        @return (parseInt($v) / 100) * 1px;
+    }
+
+    @return $v;
+}
+
+@function fontPercentage($v) {
+    
+    @if (unit($v) == "rem") {
+        @return (parseInt($v) * 16) / parseInt($font-size-root) * 100%;
+    }
+
+    @if (unit($v) == "px") {
+        @return parseInt($v) / parseInt($font-size-root) * 100%;
+    }
+}
+
+@function setColorByBackground($bg) {
+  @if (lightness($bg) > 50) {
+    @return #000000; // Lighter backgorund, return dark color
+  } @else {
+    @return #ffffff; // Darker background, return light color
+  }
+}
+
+@mixin opacity($opacity){
+    filter: alpha(opactiy=($opacity * 100));
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+    -moz-opacity: $opacity;
+    -khtml-opacity: $opacity;
+    opacity: $opacity;
+}
+
+@mixin img-grayscale($rate:1) {
+  -webkit-filter: grayscale($rate);
+    filter: grayscale($rate);
+}
+
+@mixin dropshadow($shadow: 0 0 5px rgba(0,0,0,0.5)){
+    -webkit-filter: drop-shadow($shadow);
+    filter: drop-shadow($shadow);
+}
+
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+      -ms-transform: rotate($degrees); // IE9 only
+       -o-transform: rotate($degrees);
+          transform: rotate($degrees);
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin icon-link($icon-padding:0, $icon-margin:0, $icon-size:$font-size-base, $icon-line-height:$line-height-base, $icon-border-radius:$btn-icon-border-radius, $icon-color:$btn-icon-color, $icon-background-color:$btn-icon-bg, $icon-border-color:$btn-icon-border-color) {
+    
+    @include button-size($icon-padding, $icon-padding, $icon-size, $icon-border-radius);
+    @include button-outline-variant($icon-color);
+    @include transition(all .2s ease-in-out);
+
+    // override settings
+    display: inline-block;
+    text-align: center;
+    line-height:$icon-line-height;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+
+    margin:$icon-margin;
+
+}
+
+@mixin icon-button($icon-padding:0, $icon-margin:0, $icon-size:$font-size-base, $icon-line-height:$line-height-base, $icon-border-radius:$btn-icon-border-radius, $icon-color:$btn-icon-color, $icon-background-color:$btn-icon-bg, $icon-border-color:$btn-icon-border-color, $icon-border-width:$btn-icon-border-width) {
+    
+    @include button-size($icon-padding, $icon-padding, $icon-size, $icon-border-radius);
+    @include button-variant($icon-color, $icon-background-color, $icon-border-color);
+    @include transition(all .2s ease-in-out);
+
+    $icon-total-width: convertToPx($icon-size) * $icon-line-height + convertToPx($icon-padding) * 2 + convertToPx($icon-border-width) * 2;
+
+    min-width: $icon-total-width;
+    line-height:$icon-line-height;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: $icon-border-width solid transparent;
+
+    margin:$icon-margin;
+}
+
+
+@mixin icon-button-variant($color, $background, $border) {
+  $active-background: darken($background, 10%);
+  $active-border: darken($border, 12%);
+
+  color: $color !important;
+  background-color: $background !important;
+  border-color: $border !important;
+  @include box-shadow($btn-box-shadow);
+
+  @include hover {
+    color: $color !important;
+    background-color: $active-background !important;
+        border-color: $active-border !important;
+  }
+
+  &:focus,
+  &.focus {
+    color: $color !important;
+    background-color: $active-background !important;
+        border-color: $active-border !important;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color !important;
+    background-color: $active-background !important;
+        border-color: $active-border !important;
+    // Remove the gradient for the pressed/active state
+    background-image: none;
+    @include box-shadow($btn-active-box-shadow);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color !important;
+      background-color: darken($background, 17%) !important;
+          border-color: darken($border, 25%) !important;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    &:focus,
+    &.focus {
+      background-color: $background !important;
+          border-color: $border !important;
+    }
+    @include hover {
+      background-color: $background !important;
+          border-color: $border !important;
+    }
+  }
+}
+
+@mixin icon-button-outline-variant($color) {
+  color: $color !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  border-color: $color !important;
+
+  @include hover {
+    color: setColorByBackground($color) !important;
+    background-color: $color !important;
+        border-color: $color !important;
+  }
+
+  &:focus,
+  &.focus {
+    color: setColorByBackground($color) !important;
+    background-color: $color !important;
+        border-color: $color !important;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: setColorByBackground($color) !important;
+    background-color: $color !important;
+        border-color: $color !important;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: setColorByBackground($color) !important;
+      background-color: darken($color, 17%) !important;
+          border-color: darken($color, 25%) !important;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    &:focus,
+    &.focus {
+      border-color: lighten($color, 20%) !important;
+    }
+    @include hover {
+      border-color: lighten($color, 20%) !important;
+    }
+  }
+}
+
+@mixin icon-button-skin-variant($color, $autohovercolor:false) {
+    color: $btn-icon-color !important;
+    background-image: none !important;
+    background-color: $btn-icon-bg !important;
+    border-color: $btn-icon-border-color !important;
+
+    @if $autohovercolor {
+        @include hover {
+            color: setColorByBackground($color) !important;
+            background-color: $color !important;
+            border-color: $color !important;
+        }
+
+        &:focus,
+        &.focus {
+            color: setColorByBackground($color) !important;
+            background-color: $color !important;
+            border-color: $color !important;
+        }
+
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle {
+            color: setColorByBackground($color) !important;
+            background-color: $color !important;
+            border-color: $color !important;
+
+            &:hover,
+            &:focus,
+            &.focus {
+                color: setColorByBackground($color) !important;
+                background-color: darken($color, 17%) !important;
+                border-color: darken($color, 25%) !important;
+            }
+        }
+    } @else {
+        @include hover {
+            color:$btn-icon-color !important;
+            background-color: $color !important;
+            border-color: $color !important;
+        }
+
+        &:focus,
+        &.focus {
+            color:$btn-icon-color !important;
+            background-color: $color !important;
+            border-color: $color !important;
+        }
+
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle {
+            color:$btn-icon-color !important;
+            background-color: $color !important;
+            border-color: $color !important;
+
+            &:hover,
+            &:focus,
+            &.focus {
+                color:$btn-icon-color !important;
+                background-color: darken($color, 17%) !important;
+                border-color: darken($color, 25%) !important;
+            }
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        &:focus,
+        &.focus {
+            border-color: lighten($color, 20%) !important;
+        }
+        @include hover {
+            border-color: lighten($color, 20%) !important;
+        }
+    }
+}
+
+@mixin icon-button-skin-outline-variant($color) {
+    color: $btn-icon-color !important;
+    background-image: none !important;
+    background-color: transparent !important;
+    border-color: $btn-icon-border-color !important;
+
+    @include hover {
+            color: $color !important;
+            border-color: $color !important;
+        }
+
+        &:focus,
+        &.focus {
+            color: $color !important;
+            border-color: $color !important;
+        }
+
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle {
+            color: $color !important;
+            border-color: $color !important;
+
+            &:hover,
+            &:focus,
+            &.focus {
+                color: $color !important;
+                border-color: $color !important;
+            }
+        }
+
+    &.disabled,
+    &:disabled {
+        &:focus,
+        &.focus {
+            border-color: lighten($color, 20%) !important;
+        }
+        @include hover {
+            border-color: lighten($color, 20%) !important;
+        }
+    }
+}

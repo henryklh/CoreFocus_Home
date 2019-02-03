@@ -1,0 +1,72 @@
+﻿@import "variable";
+
+nav.SideMenu {
+    margin-bottom:30px;
+
+    .SideMenuHead {
+        font-size:150%;
+    }
+    .parentURL{
+        font-size:115%;
+        font-weight:700;
+        text-decoration:none;
+        color:$gray-light;
+        letter-spacing:2px;
+        &:hover, &.active{
+            color:$brand-primary;
+        }
+    }
+    ul,li {
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+
+    > ul {
+
+        li {
+            margin:10px 0;
+
+            span,
+            a {
+                color:#666;
+                @include transition(padding .2s linear);               
+                &:hover, &:focus, &:active {
+                    color:$brand-primary;
+                }
+            }
+
+            span + ul,
+            a + ul {
+                padding-left:15px;
+            }
+        }
+
+        > li {
+
+            > span,
+            > a {
+                display:block;
+                border-bottom:1px solid #999;
+                padding-left:5px;
+                padding-right:5px;
+                &:before {
+                    content:"\f101";
+                    font-family:$font-family-fontawesome;
+                    display:inline-block;
+                    vertical-align:middle;
+                    
+                    float:right;
+                }
+
+                &:hover, &:focus, &:active {
+                    color:$brand-primary;
+                    border-color:$brand-primary;
+                    text-decoration:none;
+                    padding-right:0;
+
+                }
+            }
+        }
+    }
+}

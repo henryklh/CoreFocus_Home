@@ -1,0 +1,913 @@
+﻿/*!
+ * Zetta Menu jQuery
+ * Mega Menu and Drop Down menu
+ * http://nkdev.info
+ * @author nK
+ * @version 1.2.0
+ * Copyright 2016.
+ */
+/*
+
+====================== DEFAULT THEME ======================
+
+*/
+$zm-heading: #ff6400 !default;
+$zm-color: #1a1a1a !default;
+$zm-font-size: 1rem !default;
+$zm-height: auto !default;
+
+$zm-tab-font-size:$zm-font-size !default;
+$zm-tab-font-weight:normal !default;
+$zm-tab-color: #1a1a1a !default;
+$zm-tab-bg: #fff !default;
+$zm-tab-hover-color: #fff !default;
+$zm-tab-hover-bg: #fe9e00 !default;
+$zm-tab-active-color: $zm-tab-hover-color !default;
+$zm-tab-active-bg: $zm-tab-hover-bg !default;
+$zm-tab-padding:0.75rem 1.25rem !default;
+
+$zm-sub-font-size:$zm-font-size !default;
+$zm-sub-font-weight:normal !default;
+$zm-sub-color: #fff !default;
+$zm-sub-bg: #fe9e00 !default;
+$zm-sub-hover-color: #fff !default;
+$zm-sub-hover-bg: #ff6400 !default;
+$zm-sub-active-color: $zm-sub-hover-color !default;
+$zm-sub-active-bg: $zm-sub-hover-bg !default;
+$zm-sub-padding:0.75rem 1.25rem !default;
+
+$zm-content-bg:$zm-sub-bg !default;
+$zm-content-color:$zm-sub-color !default;
+$zm-content-hover-color: #ff6400 !default;
+
+/*
+
+====================== MAIN ====================== 
+
+*/
+.zetta-menu {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align:top;
+    color: $zm-color;
+    font-size:$zm-font-size;
+
+    a {
+        color: $zm-color;
+        cursor: pointer;
+    }
+}
+
+.zetta-menu:before,
+.zetta-menu ul,
+.zetta-menu li,
+.zetta-menu a,
+.zetta-menu label,
+.zetta-menu input,
+.zetta-menu textarea {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+    list-style: none;
+}
+
+.zetta-menu.zm-full-width {
+    display: block;
+}
+
+.zetta-menu.zm-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.zetta-menu.zm-fixed.zm-position-left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+}
+
+.zetta-menu.zm-fixed.zm-position-right {
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: 0;
+}
+
+.zetta-menu.zm-fixed.zm-position-bottom {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.zetta-menu li {
+    position: relative;
+    cursor: default;
+}
+
+.zetta-menu li > a {
+    text-decoration: none;
+    display: block;
+}
+
+.zetta-menu > li {
+    display: block;
+    float: left;
+    height:$zm-height;
+}
+
+.zetta-menu > li.zm-right-item {
+    margin-right: 0;
+    float: right;
+}
+
+.zetta-menu > li > a {
+    color: $zm-tab-color;
+    font-size:$zm-tab-font-size;
+    font-weight: $zm-tab-font-weight;
+    padding:$zm-tab-padding;
+}
+
+.zetta-menu > li:hover,
+.zetta-menu > li.zm-active,
+.zetta-menu > li.zm-opened {
+    background-color: $zm-tab-hover-bg;
+    color:$zm-tab-hover-color;
+    > a {
+        color:$zm-tab-hover-color;
+    }
+}
+
+.zetta-menu li > ul,
+.zetta-menu li > div {
+    z-index: 1;
+}
+
+.zetta-menu.zm-position-left > li,
+.zetta-menu.zm-position-right > li {
+    position: relative !important;
+}
+
+.zetta-menu.zm-position-left > li,
+.zetta-menu.zm-position-right > li,
+.zetta-menu.zm-position-left > li.zm-logo,
+.zetta-menu.zm-position-right > li.zm-logo {
+    float: none;
+}
+
+.zetta-menu.zm-position-left > li > a .zm-caret,
+.zetta-menu.zm-position-right > li > a .zm-caret {
+    float: right;
+}
+
+.zetta-menu .fa {
+    letter-spacing: 0;
+}
+
+.zetta-menu .zm-caret {
+    letter-spacing: 0;
+    float: right;
+    margin-left: 15px;
+}
+
+.zetta-menu > li > a .zm-caret {
+    float: none;
+}
+
+.zetta-menu .zm-single-icon {
+    letter-spacing: 0;
+}
+
+.zetta-menu:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/* 
+
+====================== LOGO ======================
+
+*/
+.zetta-menu > li.zm-logo {
+    float: left;
+    margin-left: 0;
+    font-size: 0;
+}
+
+.zetta-menu > li.zm-logo a {
+    padding: 0;
+    line-height: 0;
+}
+
+.zetta-menu > li.zm-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    border: none;
+}
+/* 
+
+====================== MENU DROP DOWN ======================
+
+*/
+.zetta-menu ul,
+.zetta-menu div.zm-multi-column {
+    position: absolute;
+    display: none;
+}
+
+.zetta-menu ul > li a {
+    padding: $zm-sub-padding;
+    font-size:$zm-sub-font-size;
+}
+
+.zetta-menu > li > ul,
+.zetta-menu > li > ul ul,
+.zetta-menu .zm-multi-column,
+.zetta-menu .zm-multi-column > ul ul {
+    background-color: $zm-sub-bg;
+    color: $zm-sub-color;
+}
+
+.zetta-menu > li > ul li > a,
+.zetta-menu > li > ul ul li > a,
+.zetta-menu .zm-multi-column li > a,
+.zetta-menu .zm-multi-column > ul ul li > a,
+.zetta-menu > li > ul li > a:visited,
+.zetta-menu > li > ul ul li > a:visited,
+.zetta-menu .zm-multi-column li > a:visited,
+.zetta-menu .zm-multi-column > ul ul li > a:visited {
+    color: $zm-sub-color;
+}
+
+.zetta-menu > li > ul li:hover,
+.zetta-menu > li > ul ul li:hover,
+.zetta-menu .zm-multi-column li:hover,
+.zetta-menu .zm-multi-column > ul ul li:hover,
+.zetta-menu > li > ul li.zm-opened,
+.zetta-menu > li > ul ul li.zm-opened,
+.zetta-menu .zm-multi-column li.zm-opened,
+.zetta-menu .zm-multi-column > ul ul li.zm-opened {
+    background-color: $zm-sub-hover-bg;
+}
+
+.zetta-menu > li > ul li:hover > a,
+.zetta-menu > li > ul ul li:hover > a,
+.zetta-menu .zm-multi-column li:hover > a,
+.zetta-menu .zm-multi-column > ul ul li:hover > a,
+.zetta-menu > li > ul li.zm-opened > a,
+.zetta-menu > li > ul ul li.zm-opened > a,
+.zetta-menu .zm-multi-column li.zm-opened > a,
+.zetta-menu .zm-multi-column > ul ul li.zm-opened > a,
+.zetta-menu > li > ul li:hover > a:visited,
+.zetta-menu > li > ul ul li:hover > a:visited,
+.zetta-menu .zm-multi-column li:hover > a:visited,
+.zetta-menu .zm-multi-column > ul ul li:hover > a:visited,
+.zetta-menu > li > ul li.zm-opened > a:visited,
+.zetta-menu > li > ul ul li.zm-opened > a:visited,
+.zetta-menu .zm-multi-column li.zm-opened > a:visited,
+.zetta-menu .zm-multi-column > ul ul li.zm-opened > a:visited {
+    color: $zm-sub-hover-color;
+}
+
+.zetta-menu > li > ul,
+.zetta-menu > li > div.zm-multi-column {
+    top: 100%;
+    left: 0;
+}
+
+.zetta-menu > li > ul ul,
+.zetta-menu > li > div.zm-multi-column ul {
+    top: 0;
+    left: 100%;
+}
+
+.zetta-menu > li > ul ul.zm-drop-left,
+.zetta-menu > li > div.zm-multi-column ul.zm-drop-left {
+    left: auto;
+    right: 100%;
+}
+
+.zetta-menu.zm-position-bottom > li > ul,
+.zetta-menu.zm-position-bottom > li > div.zm-multi-column {
+    top: auto;
+    bottom: 100%;
+    left: 0;
+}
+
+.zetta-menu.zm-position-bottom > li > ul ul,
+.zetta-menu.zm-position-bottom > li > div.zm-multi-column ul {
+    top: auto;
+    bottom: 0;
+    left: 100%;
+}
+
+.zetta-menu.zm-position-bottom > li > ul ul.zm-drop-left,
+.zetta-menu.zm-position-bottom > li > div.zm-multi-column ul.zm-drop-left {
+    left: -100%;
+}
+
+.zetta-menu.zm-position-left > li > ul,
+.zetta-menu.zm-position-left > li > div.zm-multi-column {
+    top: 0;
+    left: 100%;
+}
+
+.zetta-menu.zm-position-left > li > ul ul.zm-drop-left,
+.zetta-menu.zm-position-left > li > div.zm-multi-column ul.zm-drop-left {
+    top: 0;
+    left: 100%;
+}
+
+.zetta-menu.zm-position-right > li > ul,
+.zetta-menu.zm-position-right > li > div.zm-multi-column {
+    top: 0;
+    left: auto;
+    right: 100%;
+}
+
+.zetta-menu.zm-position-right > li > ul ul.zm-drop-left,
+.zetta-menu.zm-position-right > li > div.zm-multi-column ul.zm-drop-left {
+    top: 0;
+    left: auto;
+    right: 100%;
+}
+
+.zetta-menu.zm-position-right > li > ul ul,
+.zetta-menu.zm-position-right > li > div.zm-multi-column > ul ul {
+    top: 0;
+    left: auto;
+    right: 100%;
+}
+
+.zetta-menu li:hover > ul,
+.zetta-menu li:hover > div.zm-multi-column,
+.zetta-menu li:hover > div.zm-multi-column > ul {
+    display: block;
+}
+
+.zetta-menu li > div.zm-multi-column > ul,
+.zetta-menu.zm-position-bottom li > div.zm-multi-column > ul {
+    left: 0;
+    float: left;
+}
+
+.zetta-menu > li > div.zm-multi-column > ul {
+    position: relative;
+    display: inline-block;
+}
+
+.zetta-menu > li.zm-right-align > ul,
+.zetta-menu > li.zm-right-align > div.zm-multi-column {
+    left: auto;
+    right: 0;
+}
+
+.zetta-menu.zm-position-left > li.zm-right-align > ul,
+.zetta-menu.zm-position-left > li.zm-right-align > div.zm-multi-column {
+    left: 100%;
+    right: auto;
+}
+
+.zetta-menu.zm-position-left > li.zm-right-align > ul,
+.zetta-menu.zm-position-left > li.zm-right-align > div.zm-multi-column {
+    right: 100%;
+}
+/*
+
+====================== CONTENT DROP DOWN ======================
+
+*/
+.zetta-menu > li.zm-content-full {
+    position: static;
+}
+
+.zetta-menu > li.zm-content-full > div {
+    width: 100%;
+}
+
+.zetta-menu > li.zm-content > div,
+.zetta-menu > li.zm-content-full > div {
+    position: absolute;
+    display: none;
+    left: 0;
+    //padding: 15px;
+    background-color: $zm-content-bg;
+    color: $zm-content-color;
+}
+
+.zetta-menu > li.zm-content > div ul,
+.zetta-menu > li.zm-content-full > div ul {
+    display: block;
+    position: relative;
+    min-width: 0;
+}
+
+.zetta-menu > li.zm-content > div ul li:hover a,
+.zetta-menu > li.zm-content-full > div ul li:hover a,
+.zetta-menu > li.zm-content > div ul li:hover a:visited,
+.zetta-menu > li.zm-content-full > div ul li:hover a:visited {
+    color: $zm-content-hover-color;
+    text-decoration: underline;
+}
+
+.zetta-menu > li.zm-content > div img,
+.zetta-menu > li.zm-content-full > div img {
+    width: 100%;
+    //margin: 15px 0;
+}
+
+.zetta-menu > li.zm-content > div .zm-video,
+.zetta-menu > li.zm-content-full > div .zm-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.zetta-menu > li.zm-content > div .zm-video > iframe,
+.zetta-menu > li.zm-content-full > div .zm-video > iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.zetta-menu > li.zm-content:hover > div,
+.zetta-menu > li.zm-content-full:hover > div {
+    display: block;
+}
+
+.zetta-menu > li.zm-content > div,
+.zetta-menu > li.zm-content-full > div {
+    top: 100%;
+}
+
+.zetta-menu.zm-position-bottom > li.zm-content > div,
+.zetta-menu.zm-position-bottom > li.zm-content-full > div {
+    top: auto;
+    bottom: 100%;
+}
+
+.zetta-menu.zm-position-left > li.zm-content > div,
+.zetta-menu.zm-position-left > li.zm-content-full > div {
+    top: 0;
+    left: 100%;
+}
+
+.zetta-menu.zm-position-right > li.zm-content > div,
+.zetta-menu.zm-position-right > li.zm-content-full > div {
+    top: 0;
+    right: 100%;
+    left: auto;
+}
+
+.zetta-menu > li.zm-content.zm-right-align > div,
+.zetta-menu > li.zm-content-full.zm-right-align > div {
+    left: auto;
+    right: 0;
+}
+
+.zetta-menu.zm-position-left > li.zm-content.zm-right-align > div,
+.zetta-menu.zm-position-left > li.zm-content-full.zm-right-align > div {
+    left: 100%;
+    right: auto;
+}
+
+/* Hide Switcher */
+.zm-switcher,
+.zetta-menu > li.zm-switcher {
+    display: none;
+}
+/*
+
+====================== RESPONSIVE ======================
+
+*/
+@media screen and (max-width: 768px) {
+    /* ====================== MAIN ====================== */
+    .zetta-menu[class*='zm-response'] > li {
+        position: relative;
+    }
+
+    .zetta-menu[class*='zm-response'] > li > ul,
+    .zetta-menu[class*='zm-response'] > li > div.zm-multi-column > ul,
+    .zetta-menu[class*='zm-response'] > li > ul ul,
+    .zetta-menu[class*='zm-response'] > li > div.zm-multi-column > ul ul {
+        left: 0;
+        right: 0;
+        width: auto !important;
+        margin-right: 0;
+    }
+
+    .zetta-menu[class*='zm-response'] > li > ul ul,
+    .zetta-menu[class*='zm-response'] > li > div.zm-multi-column > ul ul {
+        top: 100%;
+        margin-left: 50px !important;
+    }
+
+    .zetta-menu[class*='zm-response'].zm-position-bottom > li > ul ul,
+    .zetta-menu[class*='zm-response'].zm-position-bottom > li > div.zm-multi-column > ul ul,
+    .zetta-menu[class*='zm-response'].zm-position-bottom > li > ul ul.zm-drop-left,
+    .zetta-menu[class*='zm-response'].zm-position-bottom > li > div.zm-multi-column > ul ul.zm-drop-left {
+        left: 0;
+        top: auto;
+        bottom: 100%;
+    }
+
+    .zetta-menu[class*='zm-response'].zm-position-left > li > ul,
+    .zetta-menu[class*='zm-response'].zm-position-left > li > div.zm-multi-column > ul,
+    .zetta-menu[class*='zm-response'].zm-position-right > li > ul,
+    .zetta-menu[class*='zm-response'].zm-position-right > li > div.zm-multi-column > ul {
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .zetta-menu[class*='zm-response'].zm-position-left > li > ul ul,
+    .zetta-menu[class*='zm-response'].zm-position-left > li > div.zm-multi-column > ul ul,
+    .zetta-menu[class*='zm-response'].zm-position-right > li > ul ul,
+    .zetta-menu[class*='zm-response'].zm-position-right > li > div.zm-multi-column > ul ul,
+    .zetta-menu[class*='zm-response'].zm-position-left > li > ul ul.zm-drop-left,
+    .zetta-menu[class*='zm-response'].zm-position-left > li > div.zm-multi-column > ul ul.zm-drop-left,
+    .zetta-menu[class*='zm-response'].zm-position-right > li > ul ul.zm-drop-left,
+    .zetta-menu[class*='zm-response'].zm-position-right > li > div.zm-multi-column > ul ul.zm-drop-left {
+        left: 0;
+        right: 0;
+        top: 100%;
+    }
+
+    .zetta-menu[class*='zm-response'].zm-position-left > li.zm-content > div,
+    .zetta-menu[class*='zm-response'].zm-position-left > li.zm-content-full > div,
+    .zetta-menu[class*='zm-response'].zm-position-right > li.zm-content > div,
+    .zetta-menu[class*='zm-response'].zm-position-right > li.zm-content-full > div {
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .zetta-menu[class*='zm-response'] li > div {
+        top: 100%;
+        left: 0 !important;
+        right: 0;
+        width: auto !important;
+    }
+
+    .zetta-menu[class*='zm-response'] li > div.zm-multi-column > ul {
+        width: 100% !important;
+    }
+
+    .zetta-menu[class*='zm-response'] .zm-row .zm-col {
+        display: block;
+        margin-right: 0;
+        width: 100% !important;
+        float: none;
+    }
+    /* ====================== SIMPLE ====================== */
+    .zetta-menu.zm-response-simple > li {
+        position: static;
+    }
+
+    .zetta-menu.zm-response-simple > li > a {
+        font-size: 0;
+    }
+
+    .zetta-menu.zm-response-simple > li > a i {
+        letter-spacing: 0;
+    }
+
+    .zetta-menu.zm-response-simple > li > a .zm-caret {
+        display: none;
+    }
+
+    .zetta-menu.zm-response-simple > li.zm-logo {
+        display: none;
+    }
+
+    .zetta-menu.zm-response-simple > li.zm-search {
+        position: relative;
+    }
+    /* ====================== STACK ====================== */
+    .zetta-menu.zm-response-stack > li {
+        display: block;
+        float: none;
+    }
+
+    .zetta-menu.zm-response-stack > li.zm-content-full {
+        position: relative;
+    }
+
+    .zetta-menu.zm-response-stack > li.zm-logo {
+        text-align: center;
+    }
+
+    .zetta-menu.zm-response-stack > li.zm-logo img {
+        position: relative;
+    }
+
+    .zetta-menu.zm-response-stack > li.zm-logo,
+    .zetta-menu.zm-response-stack > li.zm-right-item {
+        position: relative;
+        width: 100%;
+    }
+
+    .zetta-menu.zm-response-stack > li > a .zm-caret {
+        float: right;
+    }
+
+    .zetta-menu.zm-response-stack .zm-search {
+        float: none;
+    }
+
+    .zetta-menu.zm-response-stack .zm-search input {
+        width: 100%;
+    }
+    /* ====================== SWITCH ====================== */
+    
+    .zetta-menu.zetta-menu.zm-response-switch > li {
+        ul {
+            position:relative;
+            left:auto;
+            top:auto;
+            right:auto;
+            bottom:auto;
+
+        }
+    }
+    
+    .zm-switcher + .zetta-menu.zm-response-switch {
+        /* Switcher */
+    }
+
+    .zm-switcher + .zetta-menu.zm-response-switch > li {
+        display: none;
+        float: none;
+        position: relative;
+        width: 100%;
+    }
+
+    .zm-switcher + .zetta-menu.zm-response-switch > li.zm-logo {
+        display: block;
+    }
+
+    .zm-switcher + .zetta-menu.zm-response-switch > li.zm-logo img {
+        position: relative;
+        z-index: 1;
+    }
+
+    .zm-switcher + .zetta-menu.zm-response-switch .zm-switcher {
+        display: block;
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        padding: 0;
+        height: 60px;
+        width: 60px;
+        //background: none !important;
+        z-index: 2;
+        color:$zm-tab-color;
+        background-color:transparent;
+
+        &:hover {
+            color:$zm-tab-hover-color;
+            background-color:$zm-tab-hover-bg;
+        }
+    }
+
+    .zm-switcher + .zetta-menu.zm-response-switch .zm-switcher > label {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        height: 60px;
+        padding: 0 20px;        
+    }
+
+    .zm-switcher + .zetta-menu.zm-response-switch .zm-switcher > label:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 0px;
+        width: 20px;
+        margin-top: -1px;
+        margin-left: -10px;
+        border-bottom: 2px solid;
+        box-shadow: 0 5px 0 0, inset 0 0px 0 0, 0 -5px 0 0;
+    }
+
+    .zm-switcher + .zetta-menu.zm-response-switch > li > a .zm-caret {
+        float: right;
+    }
+
+    .zm-switcher + .zetta-menu.zm-response-switch .zm-search {
+        float: none;
+    }
+
+    .zm-switcher + .zetta-menu.zm-response-switch .zm-search input {
+        width: 100%;
+    }
+
+    .zm-switcher:checked + .zetta-menu.zm-response-switch > li {
+        display: block;
+    }
+
+    .zm-switcher:checked + .zetta-menu.zm-response-switch .zm-switcher {
+        color:$zm-tab-hover-color;
+        background-color:$zm-tab-hover-bg;
+    }
+
+    /* ====================== RESPONSE MARGIN ====================== */
+    .zetta-menu.zm-response-margin > li > ul,
+    .zetta-menu.zm-response-margin li > div {
+        margin-left: 50px !important;
+    }
+
+}
+
+.zetta-menu{
+
+    .mega-panel {
+        background-color:$zm-sub-bg;
+        color:$zm-sub-color;
+        text-align:left;
+        padding-top:1rem;
+        padding-bottom:1rem;
+
+        ul, li, a {
+            margin:0;
+            padding:0;
+            list-style:none;
+            text-align:left;
+        }
+
+        h2 {
+            font-size:1.5rem;
+        }
+
+        .mega-masonry-nav-3 {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+            -webkit-column-gap: 1rem;
+            -moz-column-gap: 1rem;
+            column-gap: 1rem;
+
+            .sub-menu {
+                display: inline-block;
+                width: 100%; // Don't let them exceed the column width
+            }
+        }
+
+        .mega-masonry-nav-4 {
+            -webkit-column-count: 4;
+            -moz-column-count: 4;
+            column-count: 4;
+            -webkit-column-gap: 1rem;
+            -moz-column-gap: 1rem;
+            column-gap: 1rem;
+
+            .sub-menu {
+                display: inline-block;
+                width: 100%; // Don't let them exceed the column width
+            }
+        }
+
+        .sub-menu {
+            text-align:left;
+            margin-bottom:1rem;
+
+            .sub-menu-title {
+                font-size:125%;
+                font-weight:600;
+            }
+
+            > ul {
+                
+                > li {
+
+                    > a {
+                        > .fa {
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .grouped-menu {
+
+            > ul {
+                > li {
+                    display:block;
+                    height:3.5rem;
+                    > a {
+
+                        display:block;
+                        line-height:3rem;
+                        padding-top:0.25rem;
+                        padding-bottom:0.25rem;
+
+                        > .caption,
+                        > .fa {
+                            
+                            display:inline-block;
+                            line-height:1.5rem;
+                            vertical-align:middle;
+                        }
+
+                        > .fa {
+                            margin-right:0.5rem;
+                            font-size:1.5rem;
+                        }
+
+                        > .caption {
+                            font-size:1rem;
+                        }
+                    }
+
+                    + li {
+                        > a {
+                            border-top:1px solid #ccc;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mega-content-title {
+            font-size:125%;
+            font-weight:600;
+        }
+
+        .mega-content-body {
+
+        }
+    }
+}
+
+/*#region zetta custom */
+.zetta-menu-fullwidth-center {
+
+    > li {
+        > a {
+            height:$zm-height;
+            line-height:$zm-height;
+            padding:0 1.5rem;
+
+            > span {
+                display:inline-block;
+                vertical-align:middle;
+                line-height:1.1;
+                border-bottom:2px solid transparent;
+                padding:0.5rem 0;
+            }
+        }
+
+        &:hover,
+        &.zm-opened, 
+        &.zm-active {
+            background-color:transparent;
+
+            > a {
+                background-color:transparent;
+
+                > span {
+                    border-color:$zm-tab-hover-color;
+                }
+
+            }
+        }
+
+        ul {
+            text-align:left;
+        }
+    }
+
+    .mega-panel {
+        border-top: 1px solid $skin-primary;
+
+        h2 {
+            font-size:125%;
+        }
+
+        .sub-menu {
+            margin-top:1rem;
+            .sub-menu-title {
+                font-size:100%;
+            }
+
+        }
+        .container-fluid {
+            max-width:1280px;
+        }
+    }
+}
+
+/*#endregion*/

@@ -1,0 +1,47 @@
+﻿@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: .5rem;
+    }
+}
+
+img:not([src]) {
+    visibility: hidden;
+}
+
+/* Fixes Firefox anomaly during image load */
+@-moz-document url-prefix() {
+    img:-moz-loading {
+        visibility: hidden;
+    }
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-eq-height > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.dzsparallaxer:not(.mode-oneelement) {
+    background-color: #bcbcbc;
+}
+
+.ProductGallery ul li {
+    list-style: none;
+}
+
+.add-to-cart-text-box {
+    max-width: 80px;
+}
+
+.u-icon-slide-up--hover .u-icon__elem-regular {
+    -ms-transform: translateY(-20%);
+    transform: translateY(-20%);
+}

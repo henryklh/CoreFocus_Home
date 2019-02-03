@@ -1,0 +1,20 @@
+2016-02-04T03:03:10.6761282Z - 14000 - Warn - Exception cleaning temporary files
+2016-02-04T03:03:10.6846346Z - 14000 - Warn - 
+2016-02-04T03:03:10.6846346Z - 14000 - Warn - Could not find a part of the path 'E:\Temp\Websites\Test1\Kentico9\CMS\App_Data\51Degrees'.
+2016-02-04T03:03:10.6926275Z - 14000 - Warn -    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   at FiftyOne.Foundation.Mobile.Detection.WebProvider.CleanTemporaryFiles()
+2017-07-17T20:07:19.9444846Z - 21804 - Fatal - Exception processing device data from binary file 'C:\HostingSpaces\corefocuspilates\fitness.ziseodigital.com\wwwroot\App_Data\CMSModules\DeviceProfile\51Degrees.dat'. Enable debug level logging and try again to help identify cause.
+2017-07-17T20:07:20.0534085Z - 21804 - Fatal - 
+2017-07-17T20:07:20.0534085Z - 21804 - Fatal - Could not create temporary file. Check worker process has write permissions to 'C:\HostingSpaces\corefocuspilates\fitness.ziseodigital.com\wwwroot\App_Data\51Degrees\51Degrees.dat.73288b94-5302-4fb0-a752-8135703f757c.tmp'. For medium trust environments ensure data file is located in App_Data.
+2017-07-17T20:07:20.0534085Z - 21804 - Fatal -    at FiftyOne.Foundation.Mobile.Detection.WebProvider.CreateNewTemporaryFile(FileInfo masterFile)
+   at FiftyOne.Foundation.Mobile.Detection.WebProvider.GetTempFileDataSet()
+   at FiftyOne.Foundation.Mobile.Detection.WebProvider.Create()
+2017-07-17T20:07:20.0534085Z - 21804 - Fatal - The process cannot access the file 'C:\HostingSpaces\corefocuspilates\fitness.ziseodigital.com\wwwroot\App_Data\CMSModules\DeviceProfile\51Degrees.dat' because it is being used by another process.
+2017-07-17T20:07:20.0534085Z - 21804 - Fatal -    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.File.Copy(String sourceFileName, String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.WebProvider.CreateNewTemporaryFile(FileInfo masterFile)
+2017-07-17T20:07:20.0534085Z - 21804 - Fatal - No data source available to create provider.

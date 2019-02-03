@@ -1,0 +1,69 @@
+﻿
+$mm-arrow-size: 8px !default;
+
+// core
+@import "../css/jquery.mmenu.oncanvas";
+@import "../addons/offcanvas/jquery.mmenu.offcanvas";
+
+// add ons
+@import "../addons/autoheight/jquery.mmenu.autoheight";
+@import "../addons/columns/jquery.mmenu.columns";
+@import "../addons/counters/jquery.mmenu.counters";
+@import "../addons/dividers/jquery.mmenu.dividers";
+@import "../addons/dragopen/jquery.mmenu.dragopen";
+@import "../addons/dropdown/jquery.mmenu.dropdown";
+@import "../addons/iconpanels/jquery.mmenu.iconpanels";
+@import "../addons/navbars/jquery.mmenu.navbars";
+@import "../addons/screenreader/jquery.mmenu.screenreader";
+@import "../addons/searchfield/jquery.mmenu.searchfield";
+@import "../addons/sectionindexer/jquery.mmenu.sectionindexer";
+@import "../addons/setselected/jquery.mmenu.setselected";
+@import "../addons/toggles/jquery.mmenu.toggles";
+
+// extensions
+@import "../extensions/borderstyle/jquery.mmenu.borderstyle";
+@import "../extensions/effects/jquery.mmenu.effects";
+@import "../extensions/fullscreen/jquery.mmenu.fullscreen";
+@import "../extensions/justifiedlistview/jquery.mmenu.justifiedlistview";
+@import "../extensions/multiline/jquery.mmenu.multiline";
+@import "../extensions/pagedim/jquery.mmenu.pagedim";
+@import "../extensions/pageshadow/jquery.mmenu.pageshadow";
+@import "../extensions/popup/jquery.mmenu.popup";
+@import "../extensions/positioning/jquery.mmenu.positioning";
+@import "../extensions/themes/jquery.mmenu.themes";
+@import "../extensions/tileview/jquery.mmenu.tileview";
+
+.mm-menu {
+    
+    // override settings
+    .mm-prev:before, .mm-next:after, .mm-arrow:after {
+        height:$mm-arrow-size;
+        width:$mm-arrow-size;
+    }
+
+    /*.mm-listview {
+        a {
+
+            &:hover, &:focus {
+                color:#00ccf1;
+            }
+            
+        }
+
+        > li {
+            .mm-arrow,
+            .mm-next {
+                &:after {
+                    border-color:
+                }
+                &:hover, &:focus {
+                    &:after {
+                        border-color:#00ccf1;
+                    }
+                
+                }
+            }
+        }
+        
+    }*/
+}

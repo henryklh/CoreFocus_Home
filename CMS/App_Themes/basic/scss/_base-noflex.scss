@@ -1,0 +1,206 @@
+﻿//-- import different plugin and with custom settings at individual scss
+
+//-- -- layout base
+@import "animate";
+@import "../plugins/Bootstrap4/scss/bootstrap";
+@import "variable";
+@import "mixins";
+ //= start from here to override default variables of bootstrap and setup other variables for plugins
+@import "fontawesome";
+@import "form";
+
+body {
+    //margin: 0;
+    //padding: 0;
+}
+
+.no-padding, .no-padding-column {
+    padding: 0;
+}
+.no-margin {
+    margin:0;
+}
+
+.Wrapper {
+     /*.HeaderWrapper{
+        max-width:1200px;
+        margin:0 auto;
+    }*/
+    min-width:320px;
+
+    &.boxed {
+        max-width: 1200px;
+        margin: 0 auto;
+        header.Header{
+             max-width: 1200px;
+        }
+    }
+    .Content{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.mt70 {
+    margin-top: 70px;
+}
+.mt35 {
+    margin-top: 35px;
+}
+.mb70 {
+    margin-bottom: 70px;
+}
+.mb35 {
+    margin-bottom: 35px;
+}
+.pt35 {
+    padding-top:35px;
+}
+.pl15{
+    padding-left:15px;
+}
+.pb35{
+    padding-bottom:35px;
+}
+.pl35{
+    padding-left:35px;
+}
+.pl55{
+    padding-left:55px;
+}
+.pr15{
+    padding-right:15px;
+}
+.pr35{
+    padding-right:35px;
+}
+.pr55{
+    padding-right:55px;
+}
+.valign-center{
+    display: flex;
+    align-items: center;
+}
+.rs-slider-wrapper-custom {
+    margin: 0px auto;
+    background-color: transparent;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.display-none{
+    display:none;
+}
+
+.Banner{
+    .white-text{
+        color:#fff;
+    }
+}
+
+.img-fluid-inline-block {
+    max-height:100%;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+// -- icon button
+
+.link-icon {
+    @include icon-link();
+}
+
+.btn-icon {
+    @include icon-button();
+}
+
+.btn-icon-circle {
+    @include icon-button($icon-padding:2px,$icon-border-radius:$btn-border-radius);
+    @include border-left-radius(($btn-border-radius * 4));
+    @include border-right-radius(($btn-border-radius * 4));
+}
+
+.btn-icon-square {
+    @include icon-button($icon-padding:2px,$icon-border-radius:0);
+    @include border-left-radius(0);
+    @include border-right-radius(0);
+}
+
+.btn-facebook {
+    @include icon-button-variant(#fff,$facebook, $facebook);
+}
+.btn-twitter {
+    @include icon-button-variant(#fff,$twitter, $twitter);
+}
+.btn-skype {
+    @include icon-button-variant(#fff,$skype, $skype);
+}
+.btn-linkedin {
+    @include icon-button-variant(#fff,$linkedin, $linkedin);
+}
+.btn-googleplus {
+    @include icon-button-variant(#fff,$googleplus, $googleplus);
+}
+.btn-youtube {
+    @include icon-button-variant(#fff,$youtube, $youtube);
+}
+.btn-flickr {
+    @include icon-button-variant(#fff,$flickr, $flickr);
+}
+.btn-pinterest {
+    @include icon-button-variant(#fff,$pinterest, $pinterest);
+}
+.btn-instagram {
+    @include icon-button-variant(#fff,$instagram, $instagram);
+}
+.btn-tumblr {
+    @include icon-button-variant(#fff,$tumblr, $tumblr);
+}
+.btn-soundcloud {
+    @include icon-button-variant(#fff,$soundcloud, $soundcloud);
+}
+
+.link-facebook,
+.btn-facebook-outline {
+    @include icon-button-outline-variant($facebook);
+}
+.link-twitter,
+.btn-twitter-outline {
+    @include icon-button-outline-variant($twitter);
+}
+.link-skype,
+.btn-skype-outline {
+    @include icon-button-outline-variant($skype);
+}
+.link-linkedin,
+.btn-linkedin-outline {
+    @include icon-button-outline-variant($linkedin);
+}
+.link-googleplus,
+.btn-googleplus-outline {
+    @include icon-button-outline-variant($googleplus);
+}
+.link-youtube,
+.btn-youtube-outline {
+    @include icon-button-outline-variant($youtube);
+}
+.link-flickr,
+.btn-flickr-outline {
+    @include icon-button-outline-variant($flickr);
+}
+.link-pinterest,
+.btn-pinterest-outline {
+    @include icon-button-outline-variant($pinterest);
+}
+.link-instagram,
+.btn-instagram-outline {
+    @include icon-button-outline-variant($instagram);
+}
+.link-tumblr,
+.btn-tumblr-outline {
+    @include icon-button-outline-variant($tumblr);
+}
+.link-soundcloud,
+.btn-soundcloud-outline {
+    @include icon-button-outline-variant($soundcloud);
+}

@@ -1,0 +1,1674 @@
+﻿//colors
+$color_0: #34495e;
+$color_1: #3498db;
+$color_2: #ffffff;
+$color_3: #2c3e50;
+$color_4: #273646;
+
+//@extend-elements
+//original selectors
+//.zetta-menu >li.zm-content >div, .zetta-menu >li.zm-content-full >div
+%extend_1 {
+	position: absolute;
+	display: none;
+	left: 0;
+	padding: 15px 20px;
+	background-color: $color_3;
+	color: $color_2;
+	-webkit-box-shadow: inset 0 0 1px 1px $color_4;
+	-moz-box-shadow: inset 0 0 1px 1px $color_4;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 0 1px 1px $color_4;
+	top: 100%;
+}
+
+//original selectors
+//.zetta-menu >li.zm-content >div input, .zetta-menu >li.zm-content-full >div input, .zetta-menu >li.zm-content >div textarea, .zetta-menu >li.zm-content-full >div textarea
+%extend_2 {
+	width: 100%;
+	margin-top: 10px;
+	font: inherit;
+	resize: none;
+	padding: 15px;
+	background-color: $color_4;
+	color: $color_2;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 0 1px transparent;
+	-moz-box-shadow: inset 0 0 0 1px transparent;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 0 0 1px transparent;
+}
+
+//original selectors
+//.zetta-menu >li.zm-content >div input.zm-button, .zetta-menu >li.zm-content-full >div input.zm-button, .zetta-menu >li.zm-content >div .zm-button, .zetta-menu >li.zm-content-full >div .zm-button
+%extend_3 {
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	font-weight: normal;
+	background-color: $color_1;
+	color: $color_2;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	padding: 15px;
+}
+
+
+.zetta-menu-inspire-blue {
+	background-color: $color_0;
+	padding: 0 5px;
+	margin: 0;
+	display: inline-block;
+	position: relative;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px 5px 5px 5px;
+	color: $color_2;
+	&:before {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		border: 0;
+		list-style: none;
+	}
+	ul {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		border: 0;
+		list-style: none;
+		position: absolute;
+		display: none;
+		padding: 5px 0;
+		> li {
+			min-height: 50px;
+			a {
+				padding: 0 20px;
+				line-height: 50px;
+			}
+		}
+	}
+	li {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		border: 0;
+		list-style: none;
+		position: relative;
+		cursor: default;
+		-webkit-transition: color 0.35s, background-color 0.35s, -webkit-box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-moz-transition: color 0.35s, background-color 0.35s, -moz-box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-ms-transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-o-transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		> a {
+			text-decoration: none;
+			display: block;
+			-webkit-transition: color 0.35s, background-color 0.35s, -webkit-box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+			-moz-transition: color 0.35s, background-color 0.35s, -moz-box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+			-ms-transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+			-o-transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		}
+		> ul {
+			z-index: 1;
+		}
+		> div {
+			z-index: 1;
+			&.zm-multi-column > ul {
+				left: 0;
+				float: left;
+			}
+		}
+		&:hover {
+			> ul {
+				display: block;
+			}
+			> div.zm-multi-column {
+				display: block;
+				> ul {
+					display: block;
+				}
+			}
+		}
+	}
+	div {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		border: 0;
+		list-style: none;
+		&.zm-multi-column {
+			position: absolute;
+			display: none;
+		}
+	}
+	a {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		border: 0;
+		list-style: none;
+		cursor: pointer;
+		color: $color_2;
+		&:visited {
+			color: $color_2;
+		}
+	}
+	label {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		border: 0;
+		list-style: none;
+	}
+	input {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		border: 0;
+		list-style: none;
+		-webkit-transition: color 0.35s, background-color 0.35s, -webkit-box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-moz-transition: color 0.35s, background-color 0.35s, -moz-box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-ms-transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-o-transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+	}
+	textarea {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		border: 0;
+		list-style: none;
+		-webkit-transition: color 0.35s, background-color 0.35s, -webkit-box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-moz-transition: color 0.35s, background-color 0.35s, -moz-box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-ms-transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-o-transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+	}
+	h1 {
+		font-weight: normal;
+		text-align: center;
+		margin: 0;
+		padding: 15px 0;
+		color: $color_1;
+		border-bottom: 1px solid $color_1;
+	}
+	h2 {
+		font-weight: normal;
+		text-align: center;
+		margin: 0;
+		padding: 15px 0;
+		color: $color_1;
+		border-bottom: 1px solid $color_1;
+	}
+	h3 {
+		font-weight: normal;
+		text-align: center;
+		margin: 0;
+		padding: 15px 0;
+		color: $color_1;
+		border-bottom: 1px solid $color_1;
+	}
+	h4 {
+		font-weight: normal;
+		text-align: center;
+		margin: 0;
+		padding: 15px 0;
+		color: $color_1;
+		border-bottom: 1px solid $color_1;
+	}
+	h5 {
+		font-weight: normal;
+		text-align: center;
+		margin: 0;
+		padding: 15px 0;
+		color: $color_1;
+		border-bottom: 1px solid $color_1;
+	}
+	h6 {
+		font-weight: normal;
+		text-align: center;
+		margin: 0;
+		padding: 15px 0;
+		color: $color_1;
+		border-bottom: 1px solid $color_1;
+	}
+	&.zm-full-width {
+		display: block;
+	}
+	&.zm-fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		&.zm-position-left {
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: auto;
+		}
+		&.zm-position-right {
+			top: 0;
+			bottom: 0;
+			left: auto;
+			right: 0;
+		}
+		&.zm-position-bottom {
+			top: auto;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+	> li {
+		display: block;
+		vertical-align: top;
+		float: left;
+		height: 50px;
+		&.zm-right-item {
+			margin-right: 0;
+			float: right;
+		}
+		> a {
+			font-weight: normal;
+			padding: 0 20px;
+			line-height: 50px;
+			.zm-caret {
+				float: none;
+			}
+		}
+		&:hover {
+			background-color: $color_1;
+			> a {
+				color: $color_0;
+				&:visited {
+					color: $color_0;
+				}
+			}
+		}
+		&.zm-active {
+			background-color: $color_1;
+			> a {
+				color: $color_0;
+				&:visited {
+					color: $color_0;
+				}
+			}
+		}
+		&.zm-opened {
+			background-color: $color_1;
+			> a {
+				color: $color_0;
+				&:visited {
+					color: $color_0;
+				}
+			}
+		}
+		&.zm-logo {
+			float: left;
+			margin-left: 0;
+			font-size: 0;
+			a {
+				padding: 0;
+				line-height: 0;
+			}
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				border: none;
+			}
+		}
+		> ul {
+			background-color: $color_3;
+			color: $color_2;
+			-webkit-box-shadow: inset 0 0 1px 1px $color_4;
+			-moz-box-shadow: inset 0 0 1px 1px $color_4;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: inset 0 0 1px 1px $color_4;
+			top: 100%;
+			left: 0;
+			-webkit-border-radius: 5px 5px 5px 5px;
+			-moz-border-radius: 5px 5px 5px 5px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px 5px 5px 5px;
+			margin-top: 6px;
+			ul {
+				background-color: $color_3;
+				color: $color_2;
+				-webkit-box-shadow: inset 0 0 1px 1px $color_4;
+				-moz-box-shadow: inset 0 0 1px 1px $color_4;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: inset 0 0 1px 1px $color_4;
+				top: 0;
+				left: 100%;
+				-webkit-border-radius: 5px 5px 5px 5px;
+				-moz-border-radius: 5px 5px 5px 5px;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 5px 5px 5px 5px;
+				li {
+					> a {
+						color: $color_2;
+						&:visited {
+							color: $color_2;
+						}
+					}
+					&:hover {
+						background-color: $color_4;
+						> a {
+							color: $color_1;
+							&:visited {
+								color: $color_1;
+							}
+						}
+					}
+					&.zm-opened {
+						background-color: $color_4;
+						> a {
+							color: $color_1;
+							&:visited {
+								color: $color_1;
+							}
+						}
+					}
+				}
+				&.zm-drop-left {
+					left: auto;
+					right: 100%;
+				}
+			}
+			li {
+				> a {
+					color: $color_2;
+					&:visited {
+						color: $color_2;
+					}
+				}
+				&:hover {
+					background-color: $color_4;
+					> a {
+						color: $color_1;
+						&:visited {
+							color: $color_1;
+						}
+					}
+				}
+				&.zm-opened {
+					background-color: $color_4;
+					> a {
+						color: $color_1;
+						&:visited {
+							color: $color_1;
+						}
+					}
+				}
+				> ul {
+					margin-left: 6px;
+					&:after {
+						content: '';
+						position: absolute;
+						width: 6px;
+						height: 100%;
+						top: 0;
+						left: -6px;
+					}
+					&.zm-drop-left {
+						margin-left: auto;
+						margin-right: 6px;
+						&:after {
+							content: '';
+							position: absolute;
+							width: 6px;
+							height: 100%;
+							top: 0;
+							left: -6px;
+							right: -6px;
+							left: auto;
+						}
+						&:before {
+							left: auto;
+							right: -5px;
+							border-left: 5px solid $color_4;
+							border-right: none;
+						}
+					}
+					&:before {
+						content: '';
+						position: absolute;
+						left: -5px;
+						top: 23px;
+						border-top: 5px solid transparent;
+						border-bottom: 5px solid transparent;
+						border-right: 5px solid $color_4;
+					}
+				}
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 6px;
+				top: -6px;
+				left: 0;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 23px;
+				top: -5px;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-bottom: 5px solid $color_4;
+			}
+		}
+		> div {
+			-webkit-border-radius: 5px 5px 5px 5px;
+			-moz-border-radius: 5px 5px 5px 5px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px 5px 5px 5px;
+			margin-top: 6px;
+			&.zm-multi-column {
+				top: 100%;
+				left: 0;
+				ul {
+					top: 0;
+					left: 100%;
+					&.zm-drop-left {
+						left: auto;
+						right: 100%;
+					}
+				}
+				> ul {
+					position: relative;
+					display: inline-block;
+				}
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 6px;
+				top: -6px;
+				left: 0;
+			}
+			li > ul {
+				margin-left: 6px;
+				&:after {
+					content: '';
+					position: absolute;
+					width: 6px;
+					height: 100%;
+					top: 0;
+					left: -6px;
+				}
+				&.zm-drop-left {
+					margin-left: auto;
+					margin-right: 6px;
+					&:after {
+						content: '';
+						position: absolute;
+						width: 6px;
+						height: 100%;
+						top: 0;
+						left: -6px;
+						right: -6px;
+						left: auto;
+					}
+				}
+			}
+		}
+		&.zm-right-align {
+			> ul {
+				left: auto;
+				right: 0;
+				&:before {
+					left: auto;
+					right: 23px;
+				}
+			}
+			> div.zm-multi-column {
+				left: auto;
+				right: 0;
+			}
+			> .zm-multi-column:before {
+				left: auto;
+				right: 23px;
+			}
+			&.zm-content > div:before {
+				left: auto;
+				right: 23px;
+			}
+		}
+		&.zm-content-full {
+			position: static;
+			> div {
+				width: 100%;
+				@extend %extend_1;
+				ul {
+					display: block;
+					position: relative;
+					min-width: 0;
+					-webkit-box-shadow: inset 0 0 1px 1px $color_4;
+					-moz-box-shadow: inset 0 0 1px 1px $color_4;
+					//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: inset 0 0 1px 1px $color_4;
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 5px;
+					li {
+						a {
+							text-align: center;
+							padding: 15px 0;
+							line-height: 1;
+							color: $color_2;
+							&:visited {
+								text-align: center;
+								padding: 15px 0;
+								line-height: 1;
+								color: $color_2;
+							}
+						}
+						&:hover {
+							background-color: transparent;
+							a {
+								color: $color_1;
+								text-decoration: underline;
+								&:visited {
+									color: $color_1;
+									text-decoration: underline;
+								}
+							}
+						}
+					}
+				}
+				img {
+					width: 100%;
+					margin: 15px 0;
+				}
+				.zm-video {
+					position: relative;
+					padding-bottom: 56.25%;
+					height: 0;
+					margin: 15px 0;
+					overflow: hidden;
+					> iframe {
+						position: absolute;
+						left: 0;
+						top: 0;
+						height: 100%;
+						width: 100%;
+					}
+				}
+				input {
+					@extend %extend_2;
+					&:hover {
+						background-color: $color_4;
+						-webkit-box-shadow: inset 0 0 0 1px $color_1;
+						-moz-box-shadow: inset 0 0 0 1px $color_1;
+						//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+						box-shadow: inset 0 0 0 1px $color_1;
+					}
+					&.zm-button {
+						@extend %extend_3;
+						&:hover {
+							color: $color_0;
+						}
+					}
+				}
+				textarea {
+					@extend %extend_2;
+					&:hover {
+						background-color: $color_4;
+						-webkit-box-shadow: inset 0 0 0 1px $color_1;
+						-moz-box-shadow: inset 0 0 0 1px $color_1;
+						//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+						box-shadow: inset 0 0 0 1px $color_1;
+					}
+				}
+				.zm-button {
+					@extend %extend_3;
+					&:hover {
+						color: $color_0;
+					}
+				}
+			}
+			&:hover > div {
+				display: block;
+			}
+			&.zm-right-align > div {
+				left: auto;
+				right: 0;
+			}
+		}
+		&.zm-content {
+			> div {
+				@extend %extend_1;
+				ul {
+					display: block;
+					position: relative;
+					min-width: 0;
+					-webkit-box-shadow: inset 0 0 1px 1px $color_4;
+					-moz-box-shadow: inset 0 0 1px 1px $color_4;
+					//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: inset 0 0 1px 1px $color_4;
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 5px;
+					li {
+						a {
+							text-align: center;
+							padding: 15px 0;
+							line-height: 1;
+							color: $color_2;
+							&:visited {
+								text-align: center;
+								padding: 15px 0;
+								line-height: 1;
+								color: $color_2;
+							}
+						}
+						&:hover {
+							background-color: transparent;
+							a {
+								color: $color_1;
+								text-decoration: underline;
+								&:visited {
+									color: $color_1;
+									text-decoration: underline;
+								}
+							}
+						}
+					}
+				}
+				img {
+					width: 100%;
+					margin: 15px 0;
+				}
+				.zm-video {
+					position: relative;
+					padding-bottom: 56.25%;
+					height: 0;
+					margin: 15px 0;
+					overflow: hidden;
+					> iframe {
+						position: absolute;
+						left: 0;
+						top: 0;
+						height: 100%;
+						width: 100%;
+					}
+				}
+				input {
+					@extend %extend_2;
+					&:hover {
+						background-color: $color_4;
+						-webkit-box-shadow: inset 0 0 0 1px $color_1;
+						-moz-box-shadow: inset 0 0 0 1px $color_1;
+						//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+						box-shadow: inset 0 0 0 1px $color_1;
+					}
+					&.zm-button {
+						@extend %extend_3;
+						&:hover {
+							color: $color_0;
+						}
+					}
+				}
+				textarea {
+					@extend %extend_2;
+					&:hover {
+						background-color: $color_4;
+						-webkit-box-shadow: inset 0 0 0 1px $color_1;
+						-moz-box-shadow: inset 0 0 0 1px $color_1;
+						//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+						box-shadow: inset 0 0 0 1px $color_1;
+					}
+				}
+				.zm-button {
+					@extend %extend_3;
+					&:hover {
+						color: $color_0;
+					}
+				}
+			}
+			&:hover > div {
+				display: block;
+			}
+			&.zm-right-align > div {
+				left: auto;
+				right: 0;
+			}
+		}
+		> .zm-multi-column {
+			&:before {
+				content: '';
+				position: absolute;
+				left: 23px;
+				top: -5px;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-bottom: 5px solid $color_4;
+			}
+			li > ul {
+				&:before {
+					content: '';
+					position: absolute;
+					left: -5px;
+					top: 23px;
+					border-top: 5px solid transparent;
+					border-bottom: 5px solid transparent;
+					border-right: 5px solid $color_4;
+				}
+				&.zm-drop-left:before {
+					left: auto;
+					right: -5px;
+					border-left: 5px solid $color_4;
+					border-right: none;
+				}
+			}
+		}
+	}
+	&.zm-position-left {
+		> li {
+			position: relative !important;
+			float: none;
+			&.zm-logo {
+				float: none;
+			}
+			> ul {
+				top: 0;
+				left: 100%;
+				margin-left: 6px;
+				&.zm-drop-left {
+					margin-left: 6px;
+					width: 6px;
+					height: 100%;
+					top: 0;
+					left: -6px;
+					bottom: auto;
+				}
+				&:after {
+					width: 6px;
+					height: 100%;
+					top: 0;
+					left: -6px;
+					bottom: auto;
+				}
+				&:before {
+					top: 23px;
+					left: -5px;
+					border-left: none;
+					border-top: 5px solid transparent;
+					border-bottom: 5px solid transparent;
+					border-right: 5px solid $color_4;
+				}
+				ul.zm-drop-left {
+					top: 0;
+					left: 100%;
+				}
+			}
+			> div {
+				margin-left: 6px;
+				&.zm-multi-column {
+					top: 0;
+					left: 100%;
+					ul.zm-drop-left {
+						top: 0;
+						left: 100%;
+					}
+				}
+				&.zm-drop-left {
+					margin-left: 6px;
+					width: 6px;
+					height: 100%;
+					top: 0;
+					left: -6px;
+					bottom: auto;
+				}
+				&:after {
+					width: 6px;
+					height: 100%;
+					top: 0;
+					left: -6px;
+					bottom: auto;
+				}
+			}
+			&.zm-right-align {
+				> ul {
+					left: 100%;
+					right: 100%;
+				}
+				> div.zm-multi-column {
+					left: 100%;
+					right: 100%;
+				}
+			}
+			&.zm-content {
+				> div {
+					top: 0;
+					left: 100%;
+				}
+				&.zm-right-align > div {
+					left: 100%;
+					right: auto;
+				}
+			}
+			&.zm-content-full {
+				> div {
+					top: 0;
+					left: 100%;
+				}
+				&.zm-right-align > div {
+					left: 100%;
+					right: auto;
+				}
+			}
+			> a .zm-caret {
+				float: right;
+			}
+			> .zm-multi-column:before {
+				top: 23px;
+				left: -5px;
+				border-left: none;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-right: 5px solid $color_4;
+			}
+		}
+		.zm-search {
+			float: none;
+			input {
+				width: 100%;
+			}
+		}
+		> .zm-content > div:before {
+			top: 23px;
+			left: -5px;
+			border-left: none;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-right: 5px solid $color_4;
+		}
+	}
+	&.zm-position-right {
+		> li {
+			position: relative !important;
+			float: none;
+			&.zm-logo {
+				float: none;
+			}
+			> ul {
+				top: 0;
+				left: auto;
+				right: 100%;
+				margin-left: 0;
+				margin-right: 6px;
+				ul {
+					top: 0;
+					left: auto;
+					right: 100%;
+					&.zm-drop-left {
+						top: 0;
+						left: auto;
+						right: 100%;
+					}
+					li > ul {
+						margin-left: 0;
+						margin-right: 6px;
+						&:after {
+							width: 6px;
+							height: 100%;
+							top: 0;
+							right: -6px;
+							left: auto;
+							bottom: auto;
+						}
+					}
+				}
+				&:after {
+					width: 6px;
+					height: 100%;
+					top: 0;
+					right: -6px;
+					left: auto;
+					bottom: auto;
+				}
+				&:before {
+					top: 23px;
+					right: -5px;
+					left: auto;
+					border-right: none;
+					border-top: 5px solid transparent;
+					border-bottom: 5px solid transparent;
+					border-left: 5px solid $color_4;
+				}
+				li > ul:before {
+					top: 23px;
+					right: -5px;
+					left: auto;
+					border-right: none;
+					border-top: 5px solid transparent;
+					border-bottom: 5px solid transparent;
+					border-left: 5px solid $color_4;
+				}
+			}
+			> div {
+				margin-left: 0;
+				margin-right: 6px;
+				&.zm-multi-column {
+					top: 0;
+					left: auto;
+					right: 100%;
+					ul.zm-drop-left {
+						top: 0;
+						left: auto;
+						right: 100%;
+					}
+					> ul ul {
+						top: 0;
+						left: auto;
+						right: 100%;
+					}
+				}
+				&:after {
+					width: 6px;
+					height: 100%;
+					top: 0;
+					right: -6px;
+					left: auto;
+					bottom: auto;
+				}
+				ul li > ul {
+					margin-left: 0;
+					margin-right: 6px;
+					&:after {
+						width: 6px;
+						height: 100%;
+						top: 0;
+						right: -6px;
+						left: auto;
+						bottom: auto;
+					}
+				}
+			}
+			> a .zm-caret {
+				float: right;
+			}
+			&.zm-content > div {
+				top: 0;
+				right: 100%;
+				left: auto;
+			}
+			&.zm-content-full > div {
+				top: 0;
+				right: 100%;
+				left: auto;
+			}
+			> .zm-multi-column {
+				&:before {
+					top: 23px;
+					right: -5px;
+					left: auto;
+					border-right: none;
+					border-top: 5px solid transparent;
+					border-bottom: 5px solid transparent;
+					border-left: 5px solid $color_4;
+				}
+				li > ul:before {
+					top: 23px;
+					right: -5px;
+					left: auto;
+					border-right: none;
+					border-top: 5px solid transparent;
+					border-bottom: 5px solid transparent;
+					border-left: 5px solid $color_4;
+				}
+			}
+		}
+		.zm-search {
+			float: none;
+			input {
+				width: 100%;
+			}
+		}
+		> .zm-content > div {
+			&:before {
+				top: 23px;
+				right: -5px;
+				left: auto;
+				border-right: none;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-left: 5px solid $color_4;
+			}
+			li > ul:before {
+				top: 23px;
+				right: -5px;
+				left: auto;
+				border-right: none;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-left: 5px solid $color_4;
+			}
+		}
+	}
+	.fa {
+		font-size: 12pt;
+		letter-spacing: 13px;
+		line-height: inherit;
+	}
+	.zm-caret {
+		letter-spacing: 0;
+		float: right;
+		margin-left: 15px;
+	}
+	.zm-single-icon {
+		letter-spacing: 0;
+	}
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.zm-button {
+		-webkit-transition: color 0.35s, background-color 0.35s, -webkit-box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-moz-transition: color 0.35s, background-color 0.35s, -moz-box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-ms-transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		-o-transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: color 0.35s, background-color 0.35s, box-shadow 0.35s, width 0.35s, text-shadow 0.35s;
+	}
+	.zm-multi-column {
+		background-color: $color_3;
+		color: $color_2;
+		-webkit-box-shadow: inset 0 0 1px 1px $color_4;
+		-moz-box-shadow: inset 0 0 1px 1px $color_4;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 0 0 1px 1px $color_4;
+		li {
+			> a {
+				color: $color_2;
+				&:visited {
+					color: $color_2;
+				}
+			}
+			&:hover {
+				background-color: $color_4;
+				> a {
+					color: $color_1;
+					&:visited {
+						color: $color_1;
+					}
+				}
+			}
+			&.zm-opened {
+				background-color: $color_4;
+				> a {
+					color: $color_1;
+					&:visited {
+						color: $color_1;
+					}
+				}
+			}
+		}
+		> ul ul {
+			background-color: $color_3;
+			color: $color_2;
+			-webkit-box-shadow: inset 0 0 1px 1px $color_4;
+			-moz-box-shadow: inset 0 0 1px 1px $color_4;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: inset 0 0 1px 1px $color_4;
+			-webkit-border-radius: 5px 5px 5px 5px;
+			-moz-border-radius: 5px 5px 5px 5px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px 5px 5px 5px;
+			li {
+				> a {
+					color: $color_2;
+					&:visited {
+						color: $color_2;
+					}
+				}
+				&:hover {
+					background-color: $color_4;
+					> a {
+						color: $color_1;
+						&:visited {
+							color: $color_1;
+						}
+					}
+				}
+				&.zm-opened {
+					background-color: $color_4;
+					> a {
+						color: $color_1;
+						&:visited {
+							color: $color_1;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.zm-position-bottom {
+		> li {
+			> ul {
+				top: auto;
+				bottom: 100%;
+				left: 0;
+				margin-top: 0;
+				margin-bottom: 6px;
+				ul {
+					top: auto;
+					bottom: 0;
+					left: 100%;
+					&.zm-drop-left {
+						left: -100%;
+					}
+				}
+				&:after {
+					height: 6px;
+					top: auto;
+					bottom: -6px;
+					left: 0;
+				}
+				&:before {
+					top: auto;
+					bottom: -5px;
+					border-bottom: none;
+					border-top: 5px solid $color_4;
+				}
+				li > ul:before {
+					top: auto;
+					bottom: 23px;
+				}
+			}
+			> div {
+				margin-top: 0;
+				margin-bottom: 6px;
+				&.zm-multi-column {
+					top: auto;
+					bottom: 100%;
+					left: 0;
+					ul {
+						top: auto;
+						bottom: 0;
+						left: 100%;
+						&.zm-drop-left {
+							left: -100%;
+						}
+					}
+				}
+				&:after {
+					height: 6px;
+					top: auto;
+					bottom: -6px;
+					left: 0;
+				}
+			}
+			&.zm-content > div {
+				top: auto;
+				bottom: 100%;
+			}
+			&.zm-content-full > div {
+				top: auto;
+				bottom: 100%;
+			}
+			> .zm-multi-column {
+				&:before {
+					top: auto;
+					bottom: -5px;
+					border-bottom: none;
+					border-top: 5px solid $color_4;
+				}
+				li > ul:before {
+					top: auto;
+					bottom: 23px;
+				}
+			}
+		}
+		li > div.zm-multi-column > ul {
+			left: 0;
+			float: left;
+		}
+		> .zm-content > div {
+			&:before {
+				top: auto;
+				bottom: -5px;
+				border-bottom: none;
+				border-top: 5px solid $color_4;
+			}
+			li > ul:before {
+				top: auto;
+				bottom: 23px;
+			}
+		}
+	}
+	.zm-row {
+		display: block;
+		.zm-col {
+			display: inline-block;
+			margin-bottom: 5px;
+			padding: 5px;
+			vertical-align: top;
+			float: left;
+			&.c-12 {
+				width: 100%;
+			}
+			&.c-11 {
+				width: 91.66666666666667%;
+			}
+			&.c-10 {
+				width: 83.33333333333334%;
+			}
+			&.c-9 {
+				width: 75%;
+			}
+			&.c-8 {
+				width: 66.66666666666667%;
+			}
+			&.c-7 {
+				width: 58.333333333333336%;
+			}
+			&.c-6 {
+				width: 50%;
+			}
+			&.c-5 {
+				width: 41.66666666666667%;
+			}
+			&.c-4 {
+				width: 33.333333333333336%;
+			}
+			&.c-3 {
+				width: 25%;
+			}
+			&.c-2 {
+				width: 16.666666666666668%;
+			}
+			&.c-1 {
+				width: 8.333333333333334%;
+			}
+			> .zm-grid-wrapper {
+				padding: 15px 20px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 5px;
+				background-color: $color_4;
+				color: $color_1;
+				-webkit-box-shadow: inset 0 0 1px 1px $color_4;
+				-moz-box-shadow: inset 0 0 1px 1px $color_4;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: inset 0 0 1px 1px $color_4;
+			}
+		}
+	}
+	.zm-search {
+		position: relative;
+		overflow: hidden;
+		input {
+			height: 50px;
+			padding: 0 27.5px;
+			font-size: inherit;
+			-webkit-appearance: none;
+			width: 0;
+			opacity: 0.01;
+			color: $color_0;
+			&:focus {
+				width: 150px;
+				opacity: 1;
+				background-color: $color_1;
+				color: $color_0;
+				+ label {
+					display: none;
+				}
+			}
+			&:hover {
+				background-color: $color_1;
+				color: $color_0;
+			}
+		}
+		&:hover {
+			background-color: $color_1;
+			color: $color_0;
+		}
+		form > label {
+			position: absolute;
+			cursor: text;
+			left: 0;
+			top: 0;
+			padding: 0 20px;
+			line-height: 50px;
+		}
+	}
+	> .zm-content > div {
+		&:before {
+			content: '';
+			position: absolute;
+			left: 23px;
+			top: -5px;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-bottom: 5px solid $color_4;
+		}
+		li > ul {
+			&:before {
+				content: '';
+				position: absolute;
+				left: -5px;
+				top: 23px;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-right: 5px solid $color_4;
+			}
+			&.zm-drop-left:before {
+				left: auto;
+				right: -5px;
+				border-left: 5px solid $color_4;
+				border-right: none;
+			}
+		}
+	}
+}
+@media screen and(max-width: 768px) {
+	.zetta-menu[class*='zm-response'] {
+		> li {
+			position: relative;
+			> ul {
+				left: 0;
+				right: 0;
+				width: auto !important;
+				margin-right: 0;
+				ul {
+					left: 0;
+					right: 0;
+					width: auto !important;
+					margin-right: 0;
+					top: 100%;
+					margin-left: 50px !important;
+				}
+			}
+			> div.zm-multi-column > ul {
+				left: 0;
+				right: 0;
+				width: auto !important;
+				margin-right: 0;
+				ul {
+					left: 0;
+					right: 0;
+					width: auto !important;
+					margin-right: 0;
+					top: 100%;
+					margin-left: 50px !important;
+				}
+			}
+		}
+		&.zm-position-bottom > li {
+			> ul ul {
+				left: 0;
+				top: auto;
+				bottom: 100%;
+				&.zm-drop-left {
+					left: 0;
+					top: auto;
+					bottom: 100%;
+				}
+			}
+			> div.zm-multi-column > ul ul {
+				left: 0;
+				top: auto;
+				bottom: 100%;
+				&.zm-drop-left {
+					left: 0;
+					top: auto;
+					bottom: 100%;
+				}
+			}
+		}
+		&.zm-position-left > li {
+			> ul {
+				top: 100%;
+				left: 0;
+				right: 0;
+				ul {
+					left: 0;
+					right: 0;
+					top: 100%;
+					&.zm-drop-left {
+						left: 0;
+						right: 0;
+						top: 100%;
+					}
+				}
+			}
+			> div.zm-multi-column > ul {
+				top: 100%;
+				left: 0;
+				right: 0;
+				ul {
+					left: 0;
+					right: 0;
+					top: 100%;
+					&.zm-drop-left {
+						left: 0;
+						right: 0;
+						top: 100%;
+					}
+				}
+			}
+			&.zm-content > div {
+				top: 100%;
+				left: 0;
+				right: 0;
+			}
+			&.zm-content-full > div {
+				top: 100%;
+				left: 0;
+				right: 0;
+			}
+		}
+		&.zm-position-right > li {
+			> ul {
+				top: 100%;
+				left: 0;
+				right: 0;
+				ul {
+					left: 0;
+					right: 0;
+					top: 100%;
+					&.zm-drop-left {
+						left: 0;
+						right: 0;
+						top: 100%;
+					}
+				}
+			}
+			> div.zm-multi-column > ul {
+				top: 100%;
+				left: 0;
+				right: 0;
+				ul {
+					left: 0;
+					right: 0;
+					top: 100%;
+					&.zm-drop-left {
+						left: 0;
+						right: 0;
+						top: 100%;
+					}
+				}
+			}
+			&.zm-content > div {
+				top: 100%;
+				left: 0;
+				right: 0;
+			}
+			&.zm-content-full > div {
+				top: 100%;
+				left: 0;
+				right: 0;
+			}
+		}
+		li > div {
+			top: 100%;
+			left: 0 !important;
+			right: 0;
+			width: auto !important;
+			&.zm-multi-column > ul {
+				width: 100% !important;
+			}
+		}
+		.zm-row .zm-col {
+			display: block;
+			margin-right: 0;
+			width: 100% !important;
+			float: none;
+		}
+	}
+	.zetta-menu {
+		&.zm-response-stack {
+			> li {
+				display: block;
+				float: none;
+				&.zm-content-full {
+					position: relative;
+				}
+				&.zm-logo {
+					text-align: center;
+					position: relative;
+					width: 100%;
+					img {
+						position: relative;
+					}
+				}
+				&.zm-right-item {
+					position: relative;
+					width: 100%;
+				}
+				> a .zm-caret {
+					float: right;
+				}
+			}
+			.zm-search {
+				float: none;
+				input {
+					width: 100%;
+				}
+			}
+		}
+		&.zm-response-switch {
+			> li {
+				display: none;
+				float: none;
+				position: relative;
+				width: 100%;
+				&.zm-logo {
+					display: block;
+					img {
+						position: relative;
+						z-index: 1;
+					}
+				}
+				> a .zm-caret {
+					float: right;
+				}
+			}
+			&:before {
+				font-family: "FontAwesome";
+				content: '\f0c9';
+				position: relative;
+				float: right;
+				cursor: pointer;
+				line-height: 50px;
+				height: 50px;
+				padding: 0 20px;
+				z-index: 2;
+			}
+			&:hover {
+				&:before {
+					opacity: 0;
+				}
+				> li {
+					display: block;
+				}
+			}
+			.zm-search {
+				float: none;
+				input {
+					width: 100%;
+				}
+			}
+		}
+		&.zm-response-margin {
+			> li > ul {
+				margin-left: 50px !important;
+			}
+			li > div {
+				margin-left: 50px !important;
+			}
+		}
+		&.zm-response-simple > li {
+			position: static;
+			> a {
+				font-size: 0;
+				i {
+					letter-spacing: 0;
+				}
+				.zm-caret {
+					display: none;
+				}
+			}
+			&.zm-logo {
+				display: none;
+			}
+			&.zm-search {
+				position: relative;
+			}
+		}
+	}
+}

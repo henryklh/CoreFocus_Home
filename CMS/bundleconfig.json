@@ -1,0 +1,80 @@
+[
+  {
+    "outputFileName": "App_Themes/Unify/assets/css/bundle.css",
+    "inputFiles": [
+      "App_Themes/Unify/assets/vendor/bootstrap/bootstrap.min.css",
+      "App_Themes/Unify/assets/vendor/icon-line/css/simple-line-icons.css",
+      "App_Themes/Unify/assets/vendor/icon-etlinefont/style.css",
+      "App_Themes/Unify/assets/vendor/icon-line-pro/style.css",
+      "App_Themes/Unify/assets/vendor/icon-hs/style.css",
+      "App_Themes/Unify/assets/vendor/dzsparallaxer/dzsparallaxer.css",
+      "App_Themes/Unify/assets/vendor/dzsparallaxer/dzsscroller/scroller.css",
+      "App_Themes/Unify/assets/vendor/icon-hs/style.css",
+      "App_Themes/Unify/assets/vendor/dzsparallaxer/advancedscroller/plugin.css",
+      "App_Themes/Unify/assets/vendor/fancybox/jquery.fancybox.css",
+      "App_Themes/Unify/assets/vendor/slick-carousel/slick/slick.css",
+      "App_Themes/Unify/assets/vendor/animate.css",
+      "App_Themes/Unify/assets/vendor/hamburgers/hamburgers.min.css",
+      "App_Themes/Unify/assets/vendor/hs-megamenu/src/hs.megamenu.css",
+
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/css/settings.css",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/css/layers.css",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/css/navigation.css",
+      "App_Themes/Unify/assets/css/unify-core.css",
+      "App_Themes/Unify/assets/css/unify-components.css",
+      "App_Themes/Unify/assets/css/unify-globals.css",
+      "App_Themes/Unify/assets/vendor/mmenu/dist/css/jquery.mmenu.all.css",
+      "App_Themes/Unify/assets/css/styles.e-commerce.css",
+      "App_Themes/Unify/assets/css/custom.css"
+    ]
+  },
+  {
+    "outputFileName": "CMSScripts/Custom/Unify-brave-bundle.js",
+    "inputFiles": [
+
+      "App_Themes/Unify/assets/vendor/jquery-migrate/jquery-migrate.min.js",
+      "App_Themes/Unify/assets/vendor/popper.min.js",
+      "App_Themes/Unify/assets/vendor/bootstrap/bootstrap.min.js",
+      "App_Themes/Unify/assets/vendor/popper.min.js",
+      "App_Themes/Unify/assets/vendor/appear.js",
+      "App_Themes/Unify/assets/vendor/slick-carousel/slick/slick.js",
+      "App_Themes/Unify/assets/vendor/hs-megamenu/src/hs.megamenu.js",
+      "App_Themes/Unify/assets/vendor/mmenu/dist/js/jquery.mmenu.all.min.js",
+      "App_Themes/Unify/assets/vendor/dzsparallaxer/dzsparallaxer.js",
+      "App_Themes/Unify/assets/vendor/dzsparallaxer/dzsscroller/scroller.js",
+      "App_Themes/Unify/assets/vendor/dzsparallaxer/advancedscroller/plugin.js",
+
+      "App_Themes/Unify/assets/vendor/masonry/dist/masonry.pkgd.min.js",
+      "App_Themes/Unify/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js",
+      "App_Themes/Unify/assets/vendor/fancybox/jquery.fancybox.min.js",
+      "App_Themes/Unify/assets/vendor/cubeportfolio-full/cubeportfolio/js/jquery.cubeportfolio.min.js",
+
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/js/jquery.themepunch.tools.min.js",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/js/jquery.themepunch.revolution.min.js",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution-addons/particles/js/revolution.addon.particles.min.js",
+
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.actions.min.js",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.carousel.min.js",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.kenburn.min.js",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.migration.min.js",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.navigation.min.js",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.parallax.min.js",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.slideanims.min.js",
+      "App_Themes/Unify/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.video.min.js",
+      "App_Themes/Unify/assets/vendor/lazyload/dist/lazyload.js",
+      "App_Themes/Unify/assets/js/hs.core.js",
+
+      "App_Themes/Unify/assets/js/components/hs.carousel.js",
+      "App_Themes/Unify/assets/js/components/hs.header.js",
+      "App_Themes/Unify/assets/js/helpers/hs.hamburgers.js",
+      "App_Themes/Unify/assets/js/components/hs.tabs.js",
+      "App_Themes/Unify/assets/js/components/hs.popup.js",
+      "App_Themes/Unify/assets/js/components/hs.counter.js",
+      "App_Themes/Unify/assets/js/components/hs.cubeportfolio.js",
+      "App_Themes/Unify/assets/js/components/hs.go-to.js",
+      "App_Themes/Unify/assets/js/custom.js"
+    ]
+  }
+]
